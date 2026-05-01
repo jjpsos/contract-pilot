@@ -1,0 +1,50 @@
+.eac-admin {
+
+	.tablenav {
+		.alignleft {
+			margin-bottom: 5px;
+		}
+	}
+
+	// Common styles for all list tables
+	.wp-list-table {
+
+		// amount and date column width
+		.column-amount,
+		.column-total,
+		.column-price,
+		.column-cost,
+		.column-due,{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		// Status column width fixed.
+		//.column-status {
+		//	width: 15ch;
+		//	text-align: center;
+		//}
+
+
+		.column-metadata {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: .85em;
+			color: #888;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			span {
+				display: inline-block;
+				// add a pipe after each span except the last one
+				&:not(:last-child):after {
+					content: " |";
+					margin-right: 3px;
+					color: #ccc;
+				}
+			}
+		}
+	}
+}

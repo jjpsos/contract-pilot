@@ -1,0 +1,153 @@
+// Fix heading styles so when we put buttons in the heading they look good.
+.eac-admin {
+	.wp-heading-inline {
+		display: flex !important;
+		align-items: center;
+		line-height: 1.3;
+		font-size: 1.5em;
+		margin: 0 0 .5em 0;
+		padding: 0;
+		box-sizing: border-box;
+		gap: 10px;
+
+		.page-title-action,
+		.page-title-action:active,
+		.page-title-action:focus,
+		.page-title-action:hover {
+			top: 0;
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: normal;
+
+			&:has(.dashicons) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 28px;
+				width: 28px;
+				border-radius: 50%;
+				background-color: #f8f9fa;
+				color: #495057;
+				font-size: 1rem;
+				line-height: 1;
+				transition: background-color .15s, color .15s;
+
+				&:hover {
+					background-color: #e9ecef;
+					color: #495057;
+				}
+
+				&:active {
+					background-color: #dee2e6;
+					color: #495057;
+				}
+			}
+		}
+	}
+
+	.tablenav .actions .select2-container {
+		min-width: 180px;
+		width: unset !important;
+	}
+
+	.del {
+		color: red;
+	}
+
+	textarea[disabled='disabled'] {
+		background: #dfdfdf !important;
+	}
+}
+
+
+/*------------------------------------------------------------------------------
+Section header
+------------------------------------------------------------------------------*/
+.eac-section-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 1em;
+	min-height: 25px;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	//h2, h3 {
+	//	line-height: 1.7;
+	//	font-size: 1.5em;
+	//	margin: 0 .25em 0 0;
+	//
+	//	&:last-child {
+	//		margin-right: 0;
+	//	}
+	//}
+	//
+	//&__subtitle {
+	//	font-size: 1.25rem;
+	//	font-weight: 400;
+	//	margin: 0;
+	//}
+	//
+	//& > div {
+	//	display: flex;
+	//	align-items: center;
+	//	justify-content: space-between;
+	//	box-sizing: border-box;
+	//	gap: 10px;
+	//}
+	//
+	//p {
+	//	margin: 0;
+	//	padding: 0;
+	//}
+	//
+	//input, select, .select2, button {
+	//	margin: 0;
+	//}
+	//
+	//a {
+	//	text-decoration: none;
+	//}
+	//
+	//.page-title-action,
+	//.page-title-action:active,
+	//.page-title-action:focus,
+	//.page-title-action:hover {
+	//	top: 0;
+	//	margin-left: -5px;
+	//}
+}
+
+/*****************************************************************************
+BUTTON GROUP
+******************************************************************************/
+.eac-button-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	gap: 6px;
+}
+
+// any button contains dashicon.
+.button {
+	&:has(>.dashicons) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+	}
+
+	&.button-block {
+		text-align: center;
+		width: 100%;
+
+		& + .button-block {
+			margin-top: 10px;
+		}
+	}
+}
+

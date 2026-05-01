@@ -1,0 +1,134 @@
+@mixin make-cols( $i ) {
+	grid-template-columns: repeat($i, 1fr);
+
+	.eac-stat:nth-of-type(#{$i}n) {
+		border-right-color: #e0e0e0;
+	}
+
+	.eac-stat:nth-of-type(#{$i}n+ 1):nth-last-of-type(-n + #{$i}) {
+		border-bottom-color: #e0e0e0;
+	}
+}
+
+
+.eac-stats {
+	margin-bottom: 20px;
+	display: grid;
+	border-width: 1px 0 0 1px;
+	border-style: solid;
+	border-color: #e0e0e0;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	width: 100%;
+	grid-template-columns: 1fr;
+	border-right: 0;
+
+	@media (min-width: 782px) {
+		&.stats--2 {
+			@include make-cols(2);
+		}
+
+		&.stats--3 {
+			@include make-cols(3);
+		}
+
+		&.stats--4 {
+			@include make-cols(4);
+		}
+
+		&.stats--5 {
+			@include make-cols(5);
+		}
+	}
+
+
+	.eac-stat {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 24px;
+		background-color: #ffffff;
+		border-bottom: 1px solid #e0e0e0;
+		border-right: 1px solid #e0e0e0;
+		line-height: 1.4;
+		text-decoration: none;
+		color: #1e1e1e;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		box-sizing: border-box;
+		position: relative;
+
+		&:hover {
+			background-color: #f9f9f9;
+		}
+
+		.eac-stat__label {
+			font-size: 14px;
+			line-height: 1.4;
+			font-weight: normal;
+			display: flex;
+			color: #1e1e1e;
+			margin-bottom: 8px;
+			position: relative;
+		}
+
+		.eac-stat__value {
+			font-weight: 400;
+			color: #1e1e1e;
+			font-size: 20px;
+			line-height: 1.4;
+			position: relative;
+		}
+
+		.eac-stat__delta {
+			color: #059669;
+			background-color: rgba(5, 150, 105, .05);
+			display: inline-flex;
+			align-items: center;
+			justify-content: flex-end;
+			border-radius: 0.125em;
+			padding-left: 0.25em;
+			padding-right: 0.25em;
+			padding-top: 0.125em;
+			padding-bottom: 0.125em;
+			font-size: 10px;
+			line-height: 1;
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+			white-space: nowrap;
+
+			&.is--negative {
+				color: #dc2626;
+				background-color: rgba(220, 38, 38, .05);
+			}
+		}
+
+		.eac-stat__meta {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			color: #888;
+			margin-top: 4px;
+
+			// after every span add a pipe except the last one.
+			& > span {
+				display: inline-block;
+
+				&:not(:last-child):after {
+					content: " |";
+					margin-right: 3px;
+					color: #ccc;
+				}
+			}
+		}
+	}
+
+	.eac-card + & {
+		border-top: 0;
+		margin-top: -20px;
+	}
+}

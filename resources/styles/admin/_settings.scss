@@ -1,0 +1,259 @@
+.eac-admin {
+	.subsubsub.settings-sections-nav {
+		margin: -8px 0 0
+	}
+
+	textarea[disabled='disabled'] {
+		background: #dfdfdf !important;
+	}
+
+	table.form-table {
+		margin: 0;
+		position: relative;
+		table-layout: fixed;
+
+		.forminp-radio ul {
+			margin: 0;
+
+			li {
+				line-height: 1.4em;
+			}
+		}
+
+		input[type='text'],
+		input[type='number'],
+		input[type='email'] {
+			height: auto;
+		}
+
+		textarea.input-text {
+			height: 100%;
+			min-width: 150px;
+			display: block;
+		}
+
+		// Give regular settings inputs a standard width and padding.
+		textarea,
+		input[type='text'],
+		input[type='email'],
+		input[type='number'],
+		input[type='password'],
+		input[type='datetime'],
+		input[type='datetime-local'],
+		input[type='date'],
+		input[type='time'],
+		input[type='week'],
+		input[type='url'],
+		input[type='tel'],
+		input.regular-input {
+			width: 400px;
+			margin: 0;
+			padding: 0 8px;
+			box-sizing: border-box;
+			vertical-align: top;
+		}
+
+		input[type='datetime-local'],
+		input[type='date'],
+		input[type='time'],
+		input[type='week'],
+		input[type='tel'] {
+			width: 200px;
+		}
+
+		select {
+			width: 400px;
+			margin: 0;
+			box-sizing: border-box;
+			//line-height: 32px;
+			vertical-align: top;
+		}
+
+		input[size] {
+			width: auto !important;
+		}
+
+		// Ignore nested inputs.
+		table {
+			select,
+			textarea,
+			input[type='text'],
+			input[type='email'],
+			input[type='number'],
+			input.regular-input {
+				width: auto;
+			}
+		}
+
+		textarea.wide-input {
+			width: 100%;
+		}
+
+		img.eac-tooltip,
+		.eac-tooltip {
+			padding: 0;
+			margin: -4px 0 0 5px;
+			vertical-align: middle;
+			cursor: help;
+			line-height: 1;
+		}
+
+		span.eac-tooltip {
+			cursor: help;
+		}
+
+		th {
+			position: relative;
+			padding-right: 24px;
+		}
+
+		th label {
+			position: relative;
+			display: block;
+
+			img.eac-tooltip,
+			.eac-tooltip {
+				margin: -8px -24px 0 0;
+				position: absolute;
+				right: 0;
+				top: 50%;
+			}
+		}
+
+		th label + .eac-help-tip {
+			margin: 0 0 0 0;
+			position: absolute;
+			right: 0;
+			top: 20px;
+		}
+
+		.select2-container {
+			vertical-align: top;
+			margin-bottom: 3px;
+			max-width: 400px;
+		}
+
+		.select2-container + span.description {
+			display: block;
+			margin-top: 8px;
+		}
+
+		table.widefat th {
+			padding-right: inherit;
+		}
+
+		.wp-list-table .eac-help-tip {
+			float: none;
+		}
+
+		fieldset {
+			margin-top: 4px;
+
+			img.help_tip,
+			.eac-help-tip {
+				margin: -3px 0 0 5px;
+			}
+
+			p.description {
+				margin-bottom: 8px;
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		td.with-tooltip {
+			> fieldset {
+				margin-top: 0;
+			}
+
+			span.help-tooltip {
+				position: absolute;
+				margin-left: -30px;
+				margin-top: 7px;
+			}
+		}
+
+		.iris-picker {
+			z-index: 100;
+			display: none;
+			position: absolute;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+			.ui-slider {
+				border: 0 !important;
+				margin: 0 !important;
+				width: auto !important;
+				height: auto !important;
+				background: none transparent !important;
+
+				.ui-slider-handle {
+					margin-bottom: 0 !important;
+				}
+			}
+		}
+
+		.iris-error {
+			background-color: #ffafaf;
+		}
+
+		.colorpickpreview {
+			padding: 7px 0;
+			line-height: 1em;
+			display: inline-block;
+			width: 26px;
+			border: 1px solid #ddd;
+			font-size: 14px;
+		}
+	}
+}
+
+table.eac-exchange-rates {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-top: 0;
+	max-width: 600px;
+
+	thead th {
+		padding-top: 0 !important;
+		border-bottom: 1px solid #e5e5e5;
+
+		&.col-remove {
+			width: 30px;
+		}
+	}
+
+	th, td {
+		padding: 10px;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	td.rate > div {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	td.rate input {
+		width: 80px;
+	}
+
+	td.actions a {
+		color: #a00;
+		text-decoration: none;
+	}
+
+	select {
+		max-width: 250px;
+		width: 100%;
+	}
+
+	input[type="number"] {
+		width: 100px;
+	}
+}

@@ -1,0 +1,442 @@
+.eac-document {
+	line-height: 1.6;
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 60vh;
+	font-size: 13px;
+
+
+	h4 {
+		color: #666;
+		margin: 0 0 0.25rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5rem;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		line-height: 1;
+	}
+
+	&__logo {
+		max-width: 200px;
+		max-height: 55px;
+		height: 55px;
+		font-size: 2rem;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			width: auto;
+			max-height: 70px;
+		}
+
+		h2 {
+			font-size: 1.75rem;
+			margin: 0;
+			padding: 0;
+			color: #333;
+		}
+
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+	}
+
+	&__title {
+		text-align: right;
+		text-transform: uppercase;
+
+		&-text {
+			font-size: 1.75rem;
+			line-height: 1.5;
+			margin: 0 0 0.25rem;
+			padding: 0;
+			color: #333;
+
+			&.is-medium {
+				font-size: 1.45rem;
+			}
+		}
+
+		&-meta {
+			font-size: 1rem;
+			color: #666;
+		}
+	}
+
+	&__section {
+		margin-bottom: 1.5rem;
+		padding-bottom: 1.5rem;
+
+		&.document-details {
+			display: grid;
+			gap: 20px;
+			grid-template-columns: 1fr 1fr auto;
+			grid-template-areas: "a b c";
+			grid-auto-columns: minmax(0, 5fr);
+			grid-auto-flow: column;
+			justify-content: space-between;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		&.document-lines {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			overflow-x: auto;
+		}
+
+		&.document-totals {
+			margin-top: 0.5rem;
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			padding-top: 0;
+			gap: 80px;
+			page-break-inside: auto;
+			overflow: visible !important;
+			position: relative;
+		}
+
+		&.document-notes {
+			margin-top: 0.5rem;
+		}
+	}
+
+	&__data {
+		text-align: right;
+		padding-top: 20px;
+
+		> div {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			& > span {
+				padding: 0.25rem 0.75rem;
+				break-inside: avoid;
+				text-wrap: avoid;
+				white-space: nowrap;
+			}
+
+			&:last-child,
+			&:first-child {
+				span {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__items {
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		table-layout: fixed;
+		text-align: left;
+		border: 1px solid #333;
+		color: #333;
+
+		.line-subtotal, .line-quantity, .line-price, .line-tax {
+			text-align: right;
+		}
+
+		.line-description {
+			margin-top: 10px;
+			padding: 0;
+			color: #666;
+			position: relative;
+			padding-left: 1.5em;
+
+			// add a dash to the beginning of the description and adjust the padding.
+			&:before {
+				content: "-";
+				display: inline-block;
+				width: 1em;
+				margin-right: 0.5em;
+				color: inherit;
+				position: absolute;
+				left: 0;
+			}
+		}
+
+		.line-quantity-unit {
+			color: #666;
+			font-size: 0.85em;
+
+		}
+
+		@media only screen and (max-width: 768px) {
+			table-layout: auto !important;
+		}
+
+		th,
+		td {
+			padding: 0.5rem 0.75rem;
+			vertical-align: top;
+		}
+
+		thead {
+			border-bottom: 1px solid #333;
+
+			th {
+				font-weight: 400;
+				color: #ffffff;
+				background: #333333;
+				user-select: none;
+				vertical-align: middle;
+			}
+		}
+
+		tbody, tfoot {
+			tr {
+				border-bottom: 1px solid #333;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__totals {
+		text-align: right;
+
+		> div {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+
+			& > span {
+				padding: 0.25rem 0.75rem;
+				break-inside: avoid;
+				text-wrap: avoid;
+				//disable word wrap
+				white-space: nowrap;
+			}
+
+			&:last-child,
+			&:first-child {
+				span {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__notes {
+		margin-top: 1rem;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+	}
+
+	&__footer {
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid #666;
+	}
+}
+
+
+.eac-document-form {
+	&__main {
+		min-width: 800px;
+		overflow-x: auto;
+	}
+
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	textarea,
+	select,
+	input:not([type="checkbox"]):not([type="radio"]) {
+		width: 100%;
+		text-align: inherit;
+	}
+
+	&__section {
+		&.document-info {
+			box-sizing: border-box;
+			flex-wrap: wrap;
+			padding: 1em;
+			column-gap: 20px;
+			display: grid;
+			grid-template-columns: 3fr 2fr;
+			justify-content: space-between;
+			align-items: self-start;
+			align-content: flex-start;
+
+			h3 {
+				color: #333;
+				margin: 0 0 1.33em 0;
+				font-size: 14px;
+				margin-bottom: 20px;
+			}
+			P{
+				color: #777;
+			}
+		}
+
+		&.document-lines {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			overflow-x: auto;
+		}
+
+		&.document-totals {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 80px;
+			padding: 1em 4em 4em;
+			font-size: 14px;
+			line-height: 1.75;
+		}
+	}
+
+	.document-lines__table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		background-color: #fff;
+		table-layout: fixed;
+		width: 100%;
+		min-width: 780px;
+		border: 1px solid #ddd;
+		border-left: 0;
+		border-right: 0;
+
+
+		@media only screen and (max-width: 768px) {
+			table-layout: auto !important;
+		}
+
+		td, th {
+			padding: 1em 1em 1em !important;
+			vertical-align: top;
+
+
+			&:first-child {
+				padding-left: 1em !important;
+			}
+
+			&:last-child {
+				padding-right: 1em !important;
+			}
+		}
+
+		thead {
+			border-bottom: 1px solid #ddd;
+
+			th {
+				padding: .8em 1em !important;
+				text-align: left !important;
+				font-weight: 400;
+				color: #999;
+				background: #f8f8f8;
+				user-select: none;
+			}
+		}
+
+		tbody, tfoot {
+			tr {
+				border-bottom: 1px solid #ddd;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+
+		.line-item {
+			&__item {
+				width: 47%;
+			}
+
+			&__quantity {
+				width: 10%;
+				text-align: right !important;
+			}
+
+			&__quantity,
+			&__price,
+			&__tax,
+			&__subtotal {
+				text-align: right !important;
+			}
+
+			&__quantity {
+				width: 10%;
+			}
+
+			&__price {
+				width: 14%;
+			}
+
+			&__tax,
+			&__subtotal {
+				width: 12%;
+			}
+
+			&__actions {
+				width: 4%;
+				text-align: right !important;
+
+				> a {
+					display: inline-block;
+					color: #ccc;
+					transition: color 0.1s ease-in;
+					text-decoration: none;
+					cursor: pointer;
+
+					&:hover {
+						color: #444;
+					}
+				}
+
+				th & {
+					text-indent: -9999px;
+				}
+			}
+
+			&__description {
+				margin-top: 10px;
+				padding: 2px 6px;
+				resize: none;
+				height: 3.5em;
+			}
+		}
+	}
+
+	.document-totals__table {
+		text-align: right;
+
+		.document-total__value {
+			font-weight: 400;
+			text-align: right;
+			font-family: inherit;
+		}
+	}
+}

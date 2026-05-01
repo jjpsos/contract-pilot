@@ -1,0 +1,95 @@
+.eac-card {
+	display: block;
+	box-sizing: border-box;
+	max-width: none;
+	min-width: auto;
+	min-height: 1px;
+	background: #fff;
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 0 auto 1.5em;
+	position: relative;
+	width: 100%;
+	border: 1px solid #e1e2e2;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	h2, h3, h4 {
+		color: inherit;
+	}
+
+	input[type="number"] {
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	&:not(:has(>[class*="eac-card__"])) {
+		padding: 12px;
+	}
+
+	& > &__header, & > &__footer {
+		padding: 8px 12px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 5px;
+
+		h2, h3 {
+			padding: 0;
+			margin: 0;
+			color: inherit;
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+
+	& > &__header {
+		border-bottom: 1px solid #e1e2e2;
+	}
+
+	& > &__footer {
+		border-top: 1px solid #e1e2e2;
+	}
+
+	& > &__body {
+		padding: 12px;
+
+		& > *:first-child {
+			margin-top: 0;
+		}
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+
+		&:empty{
+			display: none;
+		}
+	}
+
+	// If card footer comes immediately after card header remove the border.
+	& > &__header + &__footer {
+		border-top: 0;
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		color: inherit;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	&__subtitle {
+		font-size: 13px;
+		font-weight: 400;
+		color: #777;
+	}
+}

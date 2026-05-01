@@ -1,0 +1,64 @@
+
+.eac-status {
+	margin: 0;
+	white-space: nowrap;
+	box-sizing: border-box;
+	background: 0 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8em;
+	line-height: 1;
+	padding: 4px 8px;
+	color: #787c82;
+	background: #f6f7f7;
+	border: 1px solid #787c82;
+	min-width: 80px;
+	display: inline-block;
+	text-align: center;
+
+	&.is--warning,
+	&.is--pending,
+	&.is--sent {
+		color: #c08c00;
+		border: 1px solid #c08c00;
+		background-color: #f5f1e1;
+	}
+
+	&.is--danger,
+	&.is--cancelled {
+		color: #f86368;
+		border: 1px solid #f86368;
+		background-color: #f7ebec;
+	}
+
+	&.is--success,
+	&.is--active,
+	&is--enabled,
+	&.is--paid,
+	&.is--completed {
+		color: #00a32a;
+		border: 1px solid #00a32a;
+		background-color: #e6f2e8;
+	}
+
+	&.is--partial {
+		color: #4678eb;
+		border: 1px solid #4678eb;
+		background-color: #e9ecf5;
+	}
+
+	&.is--info,
+	&.is--refunded {
+		color: #1689db;
+		background: #e9f0f5;
+		border: 1px solid #1689db;
+	}
+
+	//&.is--secondary,
+	//&.is--disabled,
+	//&.is--draft {
+	//	color: #787c82;
+	//	background: #f6f7f7;
+	//	border: 1px solid #787c82;
+	//}
+}

@@ -1,0 +1,36 @@
+.eac-card--extensions{
+	.eac-card{
+		border: 1px solid rgba(0, 194, 25, 0.20);
+		&__header{
+			padding: 0;
+			display: block;
+			border-bottom: none;
+			a{
+				display: flex;
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		&__body{
+			a{
+				text-decoration: none;
+			}
+		}
+		&__btn{
+			background-color: #00c219;
+			color: #fff;
+			border-radius: 100px;
+			padding: 0.375rem 1.25rem;
+			border: 1px solid #00c219;
+			&:hover,
+			&:focus,
+			&:focus{
+				background-color: #00a016;
+				border: 1px solid #00c219;
+				box-shadow: none;
+			}
+		}
+	}
+}

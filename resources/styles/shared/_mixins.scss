@@ -1,0 +1,28 @@
+%card {
+	display: block;
+	box-sizing: border-box;
+	max-width: none;
+	min-width: auto;
+	min-height: 1px;
+	background: #fff;
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 0 auto 1.5em;
+	position: relative;
+	width: 100%;
+
+	&:before, &:after {
+		content: "";
+		display: table;
+		box-sizing: inherit;
+	}
+
+	[class*=bkit] {
+		box-sizing: inherit;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

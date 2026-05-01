@@ -1,0 +1,30 @@
+.eac-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	row-gap: 0;
+	column-gap: 15px;
+	align-items: flex-start;
+
+	@for $i from 0 through 3 {
+		&.gap-x-#{$i} {
+			row-gap: #{($i * 10)}px; // Corrected here
+		}
+		&.gap-y-#{$i} {
+			column-gap: #{($i * 10)}px; // Corrected here
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		@for $i from 2 through 4 {
+			&.cols-#{$i} {
+				grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+			}
+		}
+	}
+}
+
+// Widths related utility classes.
+.eac-width-full {
+	width: 100%;
+}
+

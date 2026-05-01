@@ -1,0 +1,18 @@
+.eac-card.is--widget {
+	min-height: 142px;
+	.eac-table tbody {
+		tr:last-child td {
+			border-bottom: 0;
+		}
+	}
+
+	p.empty {
+		color: #888;
+		min-height: 5em;
+		font-size: 16px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,185 @@
+.eac-document-overview {
+
+	.document-details {
+		padding: 12px 12px 20px 12px;
+	}
+
+	.document-footer {
+		padding: 20px 12px;
+	}
+
+	table.document-address {
+		text-indent: 0;
+		border-color: inherit;
+		border-collapse: collapse;
+		padding: 0;
+		font-size: 13px;
+		line-height: 1.5em;
+		color: #777;
+		text-wrap: pretty;
+
+		.name {
+			font-weight: 600;
+		}
+	}
+}
+
+.eac-document-items {
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	width: 100%;
+	min-width: 780px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+
+	@media only screen and (max-width: 768px) {
+		table-layout: auto !important;
+	}
+
+	* {
+		word-wrap: break-word;
+	}
+
+	a, button {
+		text-decoration: none;
+	}
+
+	input[type="number"] {
+		max-width: 80px;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+
+	input[type="text"],
+	textarea,
+	select {
+		width: 100%;
+	}
+
+	textarea {
+		margin-top: 10px;
+		position: relative;
+		resize: none;
+	}
+
+	td,
+	th {
+		padding: 8px 10px;
+		text-align: left;
+		line-height: 1.3em;
+	}
+
+	thead th {
+		border-bottom: 1px solid #ddd;
+		font-weight: 600;
+		user-select: none;
+		background-color: #f6f7f7;
+	}
+
+	tbody td {
+		vertical-align: top;
+	}
+
+	#{&}__items {
+		tr{
+			> div {
+				display: none;
+			}
+			td {
+				border-bottom: 1px solid #f8f8f8;
+			}
+		}
+
+		td {
+			padding-top: 1.5em;
+			padding-bottom: 1em;
+			line-height: 1.5em;
+		}
+	}
+
+	#{&}__toolbar {
+		tr {
+			td {
+				background-color: #f6f7f7;
+				border-top: 1px solid #e1e2e2;
+				border-bottom: 1px solid #e1e2e2;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	#{&}__totals {
+		tr {
+			td {
+				padding-top: .75em;
+				padding-bottom: .75em;
+				line-height: 1.5em;
+
+				&.col-label {
+					font-weight: 600;
+				}
+			}
+
+			&:first-child td {
+				padding-top: 2em;
+			}
+
+			&:last-child td {
+				padding-bottom: 2em;
+			}
+		}
+	}
+
+	[class^="col-"]:not(.col-item, .col-subtotal ) {
+		width: 10%;
+	}
+
+	// any columns that is not .col-item
+	[class^="col-"]:not(.col-item):not([class*="left"]) {
+		text-align: right;
+
+		& > * {
+			text-align: inherit;
+		}
+	}
+
+	.col-item {
+		min-width: 200px;
+	}
+
+	.col-subtotal, tr td:last-child {
+		position: relative;
+		width: 12%;
+		padding-right: 40px;
+	}
+
+	a.remove-item {
+		max-width: 20px;
+		color: #ccc;
+		transition: color 0.1s ease-in;
+		text-decoration: none;
+		cursor: pointer;
+		padding-left: 5px;
+		font-size: 13px;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 12px;
+
+		&:hover {
+			color: #444;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+}

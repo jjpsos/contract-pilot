@@ -1,0 +1,186 @@
+.eac-form-field {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-width: 0;
+	vertical-align: top;
+	box-sizing: border-box;
+	min-height: 30px;
+	margin: 0 0 1em 0;
+
+	//label with for
+	> label:first-child {
+		display: flex;
+		align-self: self-start;
+		justify-content: flex-start;
+		align-items: center;
+		//font-weight: bold;
+		//font-size: 95%;
+		//margin-bottom: 0.25em;
+
+		font-weight: 500;
+		line-height: 1.4;
+		font-size: 12px;
+		margin-bottom: 4px;
+		text-transform: uppercase;
+
+		abbr[title="required"] {
+			color: #ff0000;
+			text-decoration: none;
+			font-weight: normal;
+
+			&:after {
+				content: "*";
+			}
+		}
+	}
+
+	//input, select, textarea
+	> input, > select, > textarea {
+		box-sizing: border-box;
+		position: relative;
+		max-width: unset;
+	}
+
+	> .button, > button {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		border-width: 1px;
+		margin: 0;
+
+		&:focus {
+			z-index: 3;
+		}
+	}
+
+	//help
+	.description {
+		margin: 2px 0 5px;
+		color: #646970;
+		font-size: 13px;
+	}
+}
+
+//group
+.eac-input-group {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	align-self: center;
+	width: 100%;
+
+	> input, > select, > textarea, .select2-container {
+		flex: 1 1 auto;
+		min-width: 0;
+		margin: 0;
+		max-width: unset;
+	}
+
+	.select2-container {
+		width: unset !important;
+	}
+
+	[class*='addon'] {
+		display: flex;
+		align-items: center;
+		padding: 0 8px;
+		text-align: center;
+		white-space: nowrap;
+		border: 1px solid #8c8f94;
+		border-radius: 4px;
+		user-select: none;
+		text-decoration: none;
+
+		&:is(select){
+			-webkit-appearance: none;
+			background: transparent;
+		}
+
+		&:is(button, a, .button) {
+			cursor: pointer;
+			background: #f9f9f9;
+		}
+	}
+
+	& > :not(:last-child) {
+		border-right: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+
+		.select2-selection {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	& > :nth-last-child(n+3) {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	& > :not(:first-child) {
+		margin-left: -1px !important;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+
+		.select2-selection {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	// if the 2nd child is select2.
+	& > :nth-child(2) {
+		.select2-selection {
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+		}
+	}
+}
+
+.inline--fields {
+	@media screen and (min-width: 850px) {
+		.eac-form-field {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: 150px 1fr;
+
+			& > label:first-child, &__label {
+				width: 150px;
+				min-width: 150px;
+				grid-column: 1;
+				padding-right: 10px;
+			}
+
+			& > *:not(:first-child) {
+				grid-column: 2;
+			}
+		}
+	}
+}
+
+.grid--fields {
+
+	@media screen and (min-width: 850px) {
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 15px;
+
+		.eac-form-field {
+			box-sizing: border-box;
+			justify-content: flex-start;
+			width: 100%;
+			min-width: 0;
+			margin: 0 0 1em 0;
+
+			&.is--full {
+				grid-column: span 2;
+			}
+		}
+	}
+}

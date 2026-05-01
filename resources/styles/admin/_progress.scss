@@ -1,0 +1,16 @@
+/*
+ * import export forms.
+ */
+.eac-progress {
+	margin: 10px 0;
+	background: #ddd;
+	border:1px solid #0073aa;
+	height: 15px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+	div {
+		background: #0073aa;
+		height: 100%;
+		width: 0;
+	}
+}
