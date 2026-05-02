@@ -67,13 +67,14 @@ class Transfer extends Model {
 
 	
 	public function save() {
-		$from_account_id = $this->from_account_id ? $this->from_account_id : ( $this->expense && $this->expense->account_id ? $this->expense->account_id : 0 );
-		$to_account_id   = $this->to_account_id ? $this->to_account_id : ( $this->payment && $this->payment->account_id ? $this->payment->account_id : 0 );
-		
-		$from_account = Account::find( $this->from_account_id );
-		$to_account   = Account::find( $this->to_account_id );
-		$expense      = Expense::make( $this->expense_id );
-		$payment      = Payment::make( $this->payment_id );
+		$expense = Expense::make( $this->expense_id );
+		$payment = Payment::make( $this->payment_id );
+
+		$from_account_id = $this->from_account_id ? (int) $this->from_account_id : ( $expense->exists() && $expense->account_id ? (int) $expense->account_id : 0 );
+		$to_account_id   = $this->to_account_id ? (int) $this->to_account_id : ( $payment->exists() && $payment->account_id ? (int) $payment->account_id : 0 );
+
+		$from_account = Account::find( $from_account_id );
+		$to_account   = Account::find( $to_account_id );
 
 		
 		if ( ! $from_account || ! $to_account ) {
@@ -86,22 +87,22 @@ class Transfer extends Model {
 		}
 
 		
-		if ( empty( $this->amount ) || ! is_numeric( $this->amount ) ) {
+		if ( ! is_numeric( $this->amount ) ) {
 			return new \WP_Error( 'invalid_amount', __( 'Invalid amount.', 'otto-contracts' ) );
 		}
 
 		if ( ! empty( $this->from_exchange_rate ) ) {
 			$from_rate = floatval( $this->from_exchange_rate );
-		} elseif ( ! empty( $this->expense ) && ! empty( $this->expense->exchange_rate ) ) {
-			$from_rate = floatval( $this->expense->exchange_rate );
+		} elseif ( $expense->exists() && ! empty( $expense->exchange_rate ) ) {
+			$from_rate = floatval( $expense->exchange_rate );
 		} else {
 			$from_rate = floatval( EAC()->currencies->get_rate( $from_account->currency ) );
 		}
 
 		if ( ! empty( $this->to_exchange_rate ) ) {
 			$to_rate = floatval( $this->to_exchange_rate );
-		} elseif ( ! empty( $this->payment ) && ! empty( $this->payment->exchange_rate ) ) {
-			$to_rate = floatval( $this->payment->exchange_rate );
+		} elseif ( $payment->exists() && ! empty( $payment->exchange_rate ) ) {
+			$to_rate = floatval( $payment->exchange_rate );
 		} else {
 			$to_rate = floatval( EAC()->currencies->get_rate( $to_account->currency ) );
 		}

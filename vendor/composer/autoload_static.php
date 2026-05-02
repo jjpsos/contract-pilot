@@ -80,6 +80,10 @@ class ComposerStaticInita25aaaa1cdd6e77296cc3b55f8e430e6
             __DIR__ . "/../.." . "/includes/Admin/Exporters/Categories.php",
         "Otto\\Admin\\Exporters\\Customers" =>
             __DIR__ . "/../.." . "/includes/Admin/Exporters/Customers.php",
+        "Otto\\Admin\\Exporters\\DocumentItems" =>
+            __DIR__ . "/../.." . "/includes/Admin/Exporters/DocumentItems.php",
+        "Otto\\Admin\\Exporters\\Documents" =>
+            __DIR__ . "/../.." . "/includes/Admin/Exporters/Documents.php",
         "Otto\\Admin\\Exporters\\Expenses" =>
             __DIR__ . "/../.." . "/includes/Admin/Exporters/Expenses.php",
         "Otto\\Admin\\Exporters\\Exporter" =>
@@ -92,8 +96,6 @@ class ComposerStaticInita25aaaa1cdd6e77296cc3b55f8e430e6
             __DIR__ . "/../.." . "/includes/Admin/Exporters/Taxes.php",
         "Otto\\Admin\\Exporters\\Transfers" =>
             __DIR__ . "/../.." . "/includes/Admin/Exporters/Transfers.php",
-        "Otto\\Admin\\Exporters\\Vendors" =>
-            __DIR__ . "/../.." . "/includes/Admin/Exporters/Vendors.php",
         "Otto\\Admin\\Importers" =>
             __DIR__ . "/../.." . "/includes/Admin/Importers.php",
         "Otto\\Admin\\Importers\\Accounts" =>
@@ -102,6 +104,10 @@ class ComposerStaticInita25aaaa1cdd6e77296cc3b55f8e430e6
             __DIR__ . "/../.." . "/includes/Admin/Importers/Categories.php",
         "Otto\\Admin\\Importers\\Customers" =>
             __DIR__ . "/../.." . "/includes/Admin/Importers/Customers.php",
+        "Otto\\Admin\\Importers\\DocumentItems" =>
+            __DIR__ . "/../.." . "/includes/Admin/Importers/DocumentItems.php",
+        "Otto\\Admin\\Importers\\Documents" =>
+            __DIR__ . "/../.." . "/includes/Admin/Importers/Documents.php",
         "Otto\\Admin\\Importers\\Expenses" =>
             __DIR__ . "/../.." . "/includes/Admin/Importers/Expenses.php",
         "Otto\\Admin\\Importers\\Importer" =>
@@ -114,8 +120,6 @@ class ComposerStaticInita25aaaa1cdd6e77296cc3b55f8e430e6
             __DIR__ . "/../.." . "/includes/Admin/Importers/Taxes.php",
         "Otto\\Admin\\Importers\\Transfers" =>
             __DIR__ . "/../.." . "/includes/Admin/Importers/Transfers.php",
-        "Otto\\Admin\\Importers\\Vendors" =>
-            __DIR__ . "/../.." . "/includes/Admin/Importers/Vendors.php",
         "Otto\\Admin\\Invoices" =>
             __DIR__ . "/../.." . "/includes/Admin/Invoices.php",
         "Otto\\Admin\\Items" =>

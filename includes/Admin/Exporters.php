@@ -11,15 +11,16 @@ class Exporters {
 	public function __construct() {
 		add_filter( 'eac_tools_page_tabs', array( __CLASS__, 'register_tabs' ), - 1 );
 		add_action( 'admin_post_eac_download_export', array( __CLASS__, 'handle_csv_download' ) );
+		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'documents_export' ) );
+		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'document_items_export' ) );
 		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'customers_export' ) );
-		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'vendors_export' ) );
-		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'categories_export' ) );
-		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'taxes_export' ) );
 		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'items_export' ) );
 		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'accounts_export' ) );
-		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'transfers_export' ) );
 		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'payments_export' ) );
 		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'expenses_export' ) );
+		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'transfers_export' ) );
+		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'categories_export' ) );
+		add_action( 'eac_tools_page_export_content', array( __CLASS__, 'taxes_export' ) );
 	}
 
 	
@@ -59,28 +60,11 @@ class Exporters {
 		?>
 		<div class="eac-card">
 			<div class="eac-card__header">
-				<h2 class="eac-card__title"><?php esc_html_e( 'Export Customers', 'otto-contracts' ); ?></h2>
+				<h2 class="eac-card__title"><?php esc_html_e( 'Export Clients', 'otto-contracts' ); ?></h2>
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="customers" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export customers from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
-					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
-				</form>
-			</div>
-		</div>
-		<?php
-	}
-
-	
-	public static function vendors_export() {
-		?>
-		<div class="eac-card">
-			<div class="eac-card__header">
-				<h2 class="eac-card__title"><?php esc_html_e( 'Export Vendors', 'otto-contracts' ); ?></h2>
-			</div>
-			<div class="eac-card__body">
-				<form method="post" class="eac_exporter" data-type="vendors" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export vendors from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export clients from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -97,7 +81,7 @@ class Exporters {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="categories" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export categories from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export categories from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -114,7 +98,7 @@ class Exporters {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="taxes" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export taxes from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export taxes from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -127,11 +111,11 @@ class Exporters {
 		?>
 		<div class="eac-card">
 			<div class="eac-card__header">
-				<h2 class="eac-card__title"><?php esc_html_e( 'Export Items', 'otto-contracts' ); ?></h2>
+				<h2 class="eac-card__title"><?php esc_html_e( 'Export Services', 'otto-contracts' ); ?></h2>
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="items" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export items from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export services from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -148,7 +132,7 @@ class Exporters {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="accounts" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export accounts from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export accounts from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -165,7 +149,7 @@ class Exporters {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="transfers" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export transfers from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export transfers from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -182,7 +166,7 @@ class Exporters {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="payments" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export payments from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export payments from this site as CSV file.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -199,7 +183,41 @@ class Exporters {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" class="eac_exporter" data-type="expenses" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
-					<p><?php esc_html_e( 'Export expenses from this site as CSV file. Exported file can be imported into other site.', 'otto-contracts' ); ?></p>
+					<p><?php esc_html_e( 'Export expenses from this site as CSV file.', 'otto-contracts' ); ?></p>
+					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
+				</form>
+			</div>
+		</div>
+		<?php
+	}
+
+	
+	public static function documents_export() {
+		?>
+		<div class="eac-card">
+			<div class="eac-card__header">
+				<h2 class="eac-card__title"><?php esc_html_e( 'Export Documents', 'otto-contracts' ); ?></h2>
+			</div>
+			<div class="eac-card__body">
+				<form method="post" class="eac_exporter" data-type="documents" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
+					<p><?php esc_html_e( 'Export documents (Contracts/Bills) headers as CSV.', 'otto-contracts' ); ?></p>
+					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
+				</form>
+			</div>
+		</div>
+		<?php
+	}
+
+	
+	public static function document_items_export() {
+		?>
+		<div class="eac-card">
+			<div class="eac-card__header">
+				<h2 class="eac-card__title"><?php esc_html_e( 'Export Document Lines', 'otto-contracts' ); ?></h2>
+			</div>
+			<div class="eac-card__body">
+				<form method="post" class="eac_exporter" data-type="document_items" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_export' ) ); ?>">
+					<p><?php esc_html_e( 'Export document line items (Contracts/Bills) as CSV.', 'otto-contracts' ); ?></p>
 					<?php submit_button( esc_html__( 'Export', 'otto-contracts' ), 'secondary', null, false ); ?>
 				</form>
 			</div>
@@ -212,9 +230,6 @@ class Exporters {
 		switch ( $type ) {
 			case 'customers':
 				$exporter = Exporters\Customers::class;
-				break;
-			case 'vendors':
-				$exporter = Exporters\Vendors::class;
 				break;
 			case 'categories':
 				$exporter = Exporters\Categories::class;
@@ -236,6 +251,12 @@ class Exporters {
 				break;
 			case 'payments':
 				$exporter = Exporters\Payments::class;
+				break;
+			case 'documents':
+				$exporter = Exporters\Documents::class;
+				break;
+			case 'document_items':
+				$exporter = Exporters\DocumentItems::class;
 				break;
 			default:
 				

@@ -5,6 +5,7 @@ namespace Otto\Admin;
 use Otto\Models\Bill;
 use Otto\Models\Invoice;
 use Otto\Utilities\FileSystemUtil;
+use Otto\Utilities\ReportsUtil;
 
 defined("ABSPATH") || exit();
 
@@ -580,6 +581,9 @@ class Ajax
             ? sanitize_text_field(wp_unslash($_POST["type"]))
             : "";
         $step = isset($_POST["step"]) ? absint(wp_unslash($_POST["step"])) : 1;
+        $posted_filename = isset($_POST["filename"])
+            ? sanitize_file_name(wp_unslash($_POST["filename"]))
+            : "";
         $exporter = Exporters::get_exporter($type);
 
         
@@ -605,6 +609,14 @@ class Ajax
             ]);
         }
 
+        if (
+            !empty($posted_filename) &&
+            0 === strpos($posted_filename, $type . "-") &&
+            substr($posted_filename, -4) === ".csv"
+        ) {
+            $exporter->set_filename($posted_filename);
+        }
+
         $exporter->process_step($step);
 
         if (100 <= $exporter->get_percent_complete()) {
@@ -627,11 +639,13 @@ class Ajax
                     $query_args,
                     admin_url("admin-post.php"),
                 ),
+                "filename" => $exporter->get_filename(),
             ]);
         } else {
             wp_send_json_success([
                 "step" => ++$step,
                 "percentage" => $exporter->get_percent_complete(),
+                "filename" => $exporter->get_filename(),
             ]);
         }
     }
@@ -779,6 +793,7 @@ class Ajax
         $percent_complete = $importer->get_percent_complete();
 
         if (100 <= $percent_complete) {
+            ReportsUtil::flush_report_caches();
             delete_user_option(
                 get_current_user_id(),
                 "{$type}_import_log_imported",
@@ -796,7 +811,7 @@ class Ajax
         }
 
         wp_send_json_success([
-            "position" => $position + 1,
+            "position" => $position,
             "percentage" => $percent_complete,
         ]);
 

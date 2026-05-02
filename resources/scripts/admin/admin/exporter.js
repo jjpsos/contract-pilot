@@ -18,6 +18,7 @@ jQuery( document ).ready( ( $ ) => {
 		this.action = 'eac_ajax_export';
 		this.nonce = this.$form.data( 'nonce' );
 		this.type = this.$form.data( 'type' );
+		this.exportFilename = '';
 		const plugin = this;
 
 		/**
@@ -40,6 +41,7 @@ jQuery( document ).ready( ( $ ) => {
 
 			// Reset previous states
 			plugin.reset();
+			plugin.exportFilename = '';
 
 			// Add spinner to the submit button
 			plugin.$submit.parent( 'p' ).append( '<span class="spinner is-active"></span>' );
@@ -60,13 +62,20 @@ jQuery( document ).ready( ( $ ) => {
 		 * @param {number} step - The current step number of the process.
 		 */
 		this.process_step = function ( step ) {
+			const data = {
+				_wpnonce: plugin.nonce,
+				type: plugin.type,
+				step,
+			};
+			if ( plugin.exportFilename ) {
+				data.filename = plugin.exportFilename;
+			}
 			window.wp.ajax.send( plugin.action, {
-				data: {
-					_wpnonce: plugin.nonce,
-					type: plugin.type,
-					step,
-				},
+				data,
 				success( res ) {
+					if ( res.filename ) {
+						plugin.exportFilename = res.filename;
+					}
 					if ( res.step === 'done' ) {
 						// Reset and handle completion
 						plugin.reset();

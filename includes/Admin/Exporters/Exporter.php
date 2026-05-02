@@ -55,9 +55,13 @@ abstract class Exporter {
 
 	
 	public function get_filename() {
-		$date = wp_date( 'Ymdhis' );
+		if ( ! empty( $this->filename ) ) {
+			return $this->filename;
+		}
 
-		return sanitize_file_name( "{$this->export_type}-$date.csv" );
+		$this->filename = sanitize_file_name( $this->export_type . '-' . wp_date( 'Ymdhis' ) . '.csv' );
+
+		return $this->filename;
 	}
 
 	
@@ -209,6 +213,7 @@ abstract class Exporter {
 
 	
 	protected function send_content( $content ) {
-		echo wp_kses_post( $content );
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- raw CSV attachment body.
+		echo $content;
 	}
 }

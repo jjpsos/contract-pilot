@@ -1059,7 +1059,7 @@ msgid "Export Customers"
 msgstr ""
 
 #: includes/Admin/Exporters.php:94
-msgid "Export customers from this site as CSV file. Exported file can be imported into other site."
+msgid "Export customers from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:112
@@ -1067,7 +1067,7 @@ msgid "Export Vendors"
 msgstr ""
 
 #: includes/Admin/Exporters.php:116
-msgid "Export vendors from this site as CSV file. Exported file can be imported into other site."
+msgid "Export vendors from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:134
@@ -1075,7 +1075,7 @@ msgid "Export Categories"
 msgstr ""
 
 #: includes/Admin/Exporters.php:138
-msgid "Export categories from this site as CSV file. Exported file can be imported into other site."
+msgid "Export categories from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:156
@@ -1083,7 +1083,7 @@ msgid "Export Taxes"
 msgstr ""
 
 #: includes/Admin/Exporters.php:160
-msgid "Export taxes from this site as CSV file. Exported file can be imported into other site."
+msgid "Export taxes from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:178
@@ -1091,7 +1091,7 @@ msgid "Export Items"
 msgstr ""
 
 #: includes/Admin/Exporters.php:182
-msgid "Export items from this site as CSV file. Exported file can be imported into other site."
+msgid "Export items from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:200
@@ -1099,7 +1099,7 @@ msgid "Export Accounts"
 msgstr ""
 
 #: includes/Admin/Exporters.php:204
-msgid "Export accounts from this site as CSV file. Exported file can be imported into other site."
+msgid "Export accounts from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:222
@@ -1107,7 +1107,7 @@ msgid "Export Transfers"
 msgstr ""
 
 #: includes/Admin/Exporters.php:226
-msgid "Export transfers from this site as CSV file. Exported file can be imported into other site."
+msgid "Export transfers from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:244
@@ -1115,7 +1115,7 @@ msgid "Export Payments"
 msgstr ""
 
 #: includes/Admin/Exporters.php:248
-msgid "Export payments from this site as CSV file. Exported file can be imported into other site."
+msgid "Export payments from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Exporters.php:266
@@ -1123,7 +1123,7 @@ msgid "Export Expenses"
 msgstr ""
 
 #: includes/Admin/Exporters.php:270
-msgid "Export expenses from this site as CSV file. Exported file can be imported into other site."
+msgid "Export expenses from this site as CSV file."
 msgstr ""
 
 #: includes/Admin/Importers.php:43

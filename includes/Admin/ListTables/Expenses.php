@@ -144,8 +144,6 @@ class Expenses extends ListTable {
 			'number'     => __( 'Expense #', 'otto-contracts' ),
 			'date'       => __( 'Date', 'otto-contracts' ),
 			'account_id' => __( 'Account', 'otto-contracts' ),
-			'vendor_id'  => __( 'Vendor', 'otto-contracts' ),
-			'bill_id'    => __( 'Bill', 'otto-contracts' ),
 			'reference'  => __( 'Reference', 'otto-contracts' ),
 			'amount'     => __( 'Amount', 'otto-contracts' ),
 		);
@@ -157,8 +155,6 @@ class Expenses extends ListTable {
 			'date'       => array( 'payment_date', true ),
 			'number'     => array( 'number', false ),
 			'account_id' => array( 'account_id', false ),
-			'bill_id'    => array( 'bill_id', false ),
-			'vendor_id'  => array( 'vendor_id', false ),
 			'reference'  => array( 'reference', false ),
 			'amount'     => array( 'amount', false ),
 		);
@@ -194,25 +190,6 @@ class Expenses extends ListTable {
 		$metadata = $item->account && $item->account->number ? ucfirst( $item->account->number ) : '';
 
 		return sprintf( '%s%s', $account, $this->column_metadata( $metadata ) );
-	}
-
-	
-	public function column_bill_id( $item ) {
-		$bill     = '&mdash;';
-		$metadata = '';
-		if ( $item->bill ) {
-			$bill = sprintf( '<a href="%s">%s</a>', esc_url( $item->bill->get_view_url() ), wp_kses_post( $item->bill->number ) );
-		}
-
-		return sprintf( '%s', empty( $this->column_metadata( $metadata ) ) ? $bill : $this->column_metadata( $metadata ) );
-	}
-
-	
-	public function column_vendor_id( $item ) {
-		$customer = $item->vendor ? sprintf( '<a href="%s">%s</a>', esc_url( $item->vendor->get_view_url() ), wp_kses_post( $item->vendor->name ) ) : '&mdash;';
-		$metadata = $item->vendor && $item->vendor->company ? $item->vendor->company : '';
-
-		return sprintf( '%s%s', $customer, $this->column_metadata( $metadata ) );
 	}
 
 	

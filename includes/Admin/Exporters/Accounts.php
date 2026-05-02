@@ -32,8 +32,9 @@ class Accounts extends Exporter {
 
 		$args = apply_filters( 'eac_export_accounts_args', $args );
 
-		$items = EAC()->accounts->query( $args );
-		$rows  = array();
+		$items       = EAC()->accounts->query( $args );
+		$this->total = EAC()->accounts->query( $args, true );
+		$rows        = array();
 
 		foreach ( $items as $item ) {
 			$row = array();

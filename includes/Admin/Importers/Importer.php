@@ -46,8 +46,8 @@ abstract class Importer {
 		$this->start_time = time();
 		$rows             = $this->rows;
 
-		if ( ! empty( $this->position ) && $this->position < count( $rows ) ) {
-			$rows = array_slice( $rows, $this->position, $this->position );
+		if ( $this->position < count( $rows ) ) {
+			$rows = array_slice( $rows, (int) $this->position );
 		}
 
 		$imported = 0;
@@ -180,5 +180,118 @@ abstract class Importer {
 		}
 
 		return intval( $memory_limit ) * 1024 * 1024;
+	}
+
+	
+	protected function normalize_import_datetime_fields( array &$data, array $keys ) {
+		foreach ( $keys as $key ) {
+			if ( ! isset( $data[ $key ] ) || '' === $data[ $key ] || null === $data[ $key ] ) {
+				continue;
+			}
+			$raw = trim( (string) $data[ $key ] );
+			$gmt = get_gmt_from_date( $raw );
+			if ( ! $gmt && false !== strtotime( $raw ) ) {
+				$gmt = get_gmt_from_date( gmdate( 'Y-m-d H:i:s', strtotime( $raw ) ) );
+			}
+			if ( $gmt ) {
+				$data[ $key ] = $gmt;
+			} else {
+				unset( $data[ $key ] );
+			}
+		}
+	}
+
+	
+	protected function normalize_transaction_import_row( array &$data, array $extra_int_keys = array() ) {
+		$int_keys = array_merge(
+			array( 'account_id', 'category_id', 'contact_id', 'document_id', 'attachment_id', 'author_id', 'parent_id' ),
+			$extra_int_keys
+		);
+		foreach ( array_unique( $int_keys ) as $k ) {
+			if ( isset( $data[ $k ] ) && '' !== $data[ $k ] && null !== $data[ $k ] ) {
+				$data[ $k ] = absint( $data[ $k ] );
+			}
+		}
+		if ( isset( $data['amount'] ) && '' !== $data['amount'] && null !== $data['amount'] ) {
+			$data['amount'] = floatval( str_replace( ',', '', (string) $data['amount'] ) );
+		}
+		if ( ! isset( $data['exchange_rate'] ) || '' === $data['exchange_rate'] || ! is_numeric( $data['exchange_rate'] ) ) {
+			$data['exchange_rate'] = 1;
+		} else {
+			$data['exchange_rate'] = floatval( $data['exchange_rate'] );
+		}
+		if ( array_key_exists( 'editable', $data ) ) {
+			$v = $data['editable'];
+			if ( '' === $v || null === $v ) {
+				unset( $data['editable'] );
+			} elseif ( is_string( $v ) ) {
+				$data['editable'] = in_array( strtolower( $v ), array( '1', 'true', 'yes' ), true ) ? 1 : 0;
+			}
+		}
+	}
+
+	/**
+	 * Normalize numeric fields on imported {@see Document} rows.
+	 *
+	 * @param array $data Import row (by reference).
+	 */
+	protected function normalize_document_import_row( array &$data ) {
+		foreach ( array( 'contact_id', 'attachment_id', 'parent_id', 'author_id' ) as $k ) {
+			if ( isset( $data[ $k ] ) && '' !== $data[ $k ] && null !== $data[ $k ] ) {
+				$data[ $k ] = absint( $data[ $k ] );
+			}
+		}
+		foreach ( array( 'discount_value', 'subtotal', 'discount', 'tax', 'total', 'exchange_rate' ) as $k ) {
+			if ( ! isset( $data[ $k ] ) || '' === $data[ $k ] || null === $data[ $k ] ) {
+				continue;
+			}
+			$raw = str_replace( ',', '', (string) $data[ $k ] );
+			if ( is_numeric( $raw ) ) {
+				$data[ $k ] = floatval( $raw );
+			}
+		}
+		if ( ! isset( $data['exchange_rate'] ) || '' === $data['exchange_rate'] || ! is_numeric( $data['exchange_rate'] ) ) {
+			$data['exchange_rate'] = 1;
+		} else {
+			$data['exchange_rate'] = floatval( $data['exchange_rate'] );
+		}
+		if ( array_key_exists( 'editable', $data ) ) {
+			$v = $data['editable'];
+			if ( '' === $v || null === $v ) {
+				unset( $data['editable'] );
+			} elseif ( is_string( $v ) ) {
+				$data['editable'] = in_array( strtolower( $v ), array( '1', 'true', 'yes' ), true ) ? 1 : 0;
+			}
+		}
+	}
+
+	/**
+	 * Normalize numeric fields on imported {@see DocumentItem} rows.
+	 *
+	 * @param array $data Import row (by reference).
+	 */
+	protected function normalize_document_item_import_row( array &$data ) {
+		foreach ( array( 'document_id', 'item_id' ) as $k ) {
+			if ( isset( $data[ $k ] ) && '' !== $data[ $k ] && null !== $data[ $k ] ) {
+				$data[ $k ] = absint( $data[ $k ] );
+			}
+		}
+		foreach ( array( 'price', 'quantity', 'subtotal', 'discount', 'tax', 'total' ) as $k ) {
+			if ( ! isset( $data[ $k ] ) || '' === $data[ $k ] || null === $data[ $k ] ) {
+				continue;
+			}
+			$raw = str_replace( ',', '', (string) $data[ $k ] );
+			if ( is_numeric( $raw ) ) {
+				$data[ $k ] = floatval( $raw );
+			}
+		}
+		if ( ! isset( $data['quantity'] ) || '' === $data['quantity'] || (float) $data['quantity'] <= 0 ) {
+			$data['quantity'] = 1;
+		}
+		if ( empty( $data['type'] ) ) {
+			$data['type'] = 'standard';
+		} else {
+			$data['type'] = sanitize_key( (string) $data['type'] );
+		}
 	}
 }

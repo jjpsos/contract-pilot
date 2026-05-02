@@ -10,15 +10,16 @@ class Importers {
 	
 	public function __construct() {
 		add_filter( 'eac_tools_page_tabs', array( __CLASS__, 'register_tabs' ), - 1 );
+		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'documents_import' ) );
+		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'document_items_import' ) );
 		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'customers_import' ) );
-		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'vendors_import' ) );
-		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'categories_import' ) );
-		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'taxes_import' ) );
 		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'items_import' ) );
 		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'accounts_import' ) );
-		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'transfers_import' ) );
 		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'payments_import' ) );
 		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'expenses_import' ) );
+		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'transfers_import' ) );
+		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'categories_import' ) );
+		add_action( 'eac_tools_page_import_content', array( __CLASS__, 'taxes_import' ) );
 	}
 
 	
@@ -36,20 +37,11 @@ class Importers {
 		?>
 		<div class="eac-card">
 			<div class="eac-card__header">
-				<h2 class="eac-card__title"><?php esc_html_e( 'Import Customers', 'otto-contracts' ); ?></h2>
+				<h2 class="eac-card__title"><?php esc_html_e( 'Import Clients', 'otto-contracts' ); ?></h2>
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="customers" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-							
-							esc_html__( 'Import customers from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/customers.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import clients from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -70,46 +62,7 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="categories" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import categories from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/categories.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
-					<div class="eac-form-field">
-						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
-						<input type="file" name="file" id="file" accept="text/csv" required>
-					</div>
-					<?php submit_button( esc_html__( 'Import', 'otto-contracts' ), 'secondary', null, false ); ?>
-				</form>
-			</div>
-		</div>
-		<?php
-	}
-
-	
-	public static function vendors_import() {
-		?>
-		<div class="eac-card">
-			<div class="eac-card__header">
-				<h2 class="eac-card__title"><?php esc_html_e( 'Import Vendors', 'otto-contracts' ); ?></h2>
-			</div>
-			<div class="eac-card__body">
-				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="vendors" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import vendors from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/vendors.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import categories from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -130,16 +83,7 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="taxes" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import taxes from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/taxes.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import taxes from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -160,16 +104,7 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="items" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import services from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/items.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import services from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -190,16 +125,7 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="accounts" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import accounts from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/accounts.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import accounts from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -220,16 +146,7 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="transfers" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import transfers from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/transfers.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import transfers from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -250,16 +167,7 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="expenses" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import expenses from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/expenses.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import expenses from CSV file.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -280,16 +188,49 @@ class Importers {
 			</div>
 			<div class="eac-card__body">
 				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="payments" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
-					<p>
-						<?php
-						printf(
-						
-							esc_html__( 'Import payments from CSV file. Download a %1$s sample file %2$s to learn how to format the CSV file.', 'otto-contracts' ),
-							'<a href="' . esc_url( EAC()->get_dir_url( 'samples/import/payments.csv' ) ) . '" download>',
-							'</a>'
-						);
-						?>
-					</p>
+					<p><?php esc_html_e( 'Import payments from CSV file.', 'otto-contracts' ); ?></p>
+					<div class="eac-form-field">
+						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
+						<input type="file" name="file" id="file" accept="text/csv" required>
+					</div>
+					<?php submit_button( esc_html__( 'Import', 'otto-contracts' ), 'secondary', null, false ); ?>
+				</form>
+			</div>
+		</div>
+		<?php
+	}
+
+	
+	public static function documents_import() {
+		?>
+		<div class="eac-card">
+			<div class="eac-card__header">
+				<h2 class="eac-card__title"><?php esc_html_e( 'Import Documents', 'otto-contracts' ); ?></h2>
+			</div>
+			<div class="eac-card__body">
+				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="documents" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
+					<p><?php esc_html_e( 'Import document headers (Contracts/Bills) from CSV.', 'otto-contracts' ); ?></p>
+					<div class="eac-form-field">
+						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
+						<input type="file" name="file" id="file" accept="text/csv" required>
+					</div>
+					<?php submit_button( esc_html__( 'Import', 'otto-contracts' ), 'secondary', null, false ); ?>
+				</form>
+			</div>
+		</div>
+		<?php
+	}
+
+	
+	public static function document_items_import() {
+		?>
+		<div class="eac-card">
+			<div class="eac-card__header">
+				<h2 class="eac-card__title"><?php esc_html_e( 'Import Document Lines', 'otto-contracts' ); ?></h2>
+			</div>
+			<div class="eac-card__body">
+				<form method="post" enctype="multipart/form-data" class="eac_importer" data-type="document_items" data-nonce="<?php echo esc_attr( wp_create_nonce( 'eac_ajax_import' ) ); ?>">
+					<p><?php esc_html_e( 'Import document line items (Contracts/Bills) from CSV.', 'otto-contracts' ); ?></p>
 					<div class="eac-form-field">
 						<label for="file"><?php esc_html_e( 'Select file', 'otto-contracts' ); ?></label>
 						<input type="file" name="file" id="file" accept="text/csv" required>
@@ -306,9 +247,6 @@ class Importers {
 		switch ( $type ) {
 			case 'customers':
 				$importer = Importers\Customers::class;
-				break;
-			case 'vendors':
-				$importer = Importers\Vendors::class;
 				break;
 			case 'categories':
 				$importer = Importers\Categories::class;
@@ -330,6 +268,12 @@ class Importers {
 				break;
 			case 'payments':
 				$importer = Importers\Payments::class;
+				break;
+			case 'documents':
+				$importer = Importers\Documents::class;
+				break;
+			case 'document_items':
+				$importer = Importers\DocumentItems::class;
 				break;
 			default:
 				

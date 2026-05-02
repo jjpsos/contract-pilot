@@ -3,22 +3,22 @@
 
 namespace Otto\Admin\Exporters;
 
-use Otto\Models\Transfer;
+use Otto\Models\Document;
 
 defined( 'ABSPATH' ) || exit();
 
 
+/**
+ * CSV export for {@see Document} rows (otto_documents).
+ */
+class Documents extends Exporter {
 
-class Transfers extends Exporter {
+	public $export_type = 'documents';
 
-	
-	public $export_type = 'transfers';
-
-	
 	public function get_columns() {
-		$hidden  = array( 'id', 'user_id', 'parent_id', 'created_via' );
-		$columns = array_values( array_diff( ( new Transfer() )->get_columns(), $hidden ) );
-		foreach ( array( 'from_account_id', 'to_account_id' ) as $extra ) {
+		$hidden  = array( 'id', 'uuid', 'author_id', 'created_via' );
+		$columns = array_values( array_diff( ( new Document() )->get_columns(), $hidden ) );
+		foreach ( array( 'parent_document_number', 'parent_document_type' ) as $extra ) {
 			if ( ! in_array( $extra, $columns, true ) ) {
 				$columns[] = $extra;
 			}
@@ -27,7 +27,6 @@ class Transfers extends Exporter {
 		return $columns;
 	}
 
-	
 	public function get_rows() {
 		$args = array(
 			'orderby' => 'id',
@@ -36,41 +35,45 @@ class Transfers extends Exporter {
 			'limit'   => $this->limit,
 		);
 
-		$args = apply_filters( 'eac_export_transfers_args', $args );
+		$args = apply_filters( 'eac_export_documents_args', $args );
 
-		$items       = EAC()->transfers->query( $args );
-		$this->total = EAC()->transfers->query( $args, true );
+		$items       = Document::results( $args );
+		$this->total = Document::count( $args );
 		$rows        = array();
 
 		foreach ( $items as $item ) {
 			$row = array();
 			foreach ( $this->get_columns() as $column ) {
 				switch ( $column ) {
-					case 'from_account_id':
-						$value = ( $item->expense_id && $item->expense ) ? $item->expense->account_id : '';
-						break;
-					case 'to_account_id':
-						$value = ( $item->payment_id && $item->payment ) ? $item->payment->account_id : '';
+					case 'parent_document_number':
+					case 'parent_document_type':
+						$value = '';
+						if ( ! empty( $item->parent_id ) ) {
+							$p = Document::find( (int) $item->parent_id );
+							if ( $p ) {
+								$value = ( 'parent_document_number' === $column ) ? $p->number : $p->type;
+							}
+						}
 						break;
 					default:
 						$value = isset( $item->{$column} ) ? $item->{$column} : null;
 				}
-
 				$row[ $column ] = $value;
 			}
 			if ( ! empty( $row ) ) {
 				$dates = array(
-					'transfer_date',
+					'issue_date',
+					'due_date',
+					'sent_date',
+					'payment_date',
 					'date_created',
 					'date_updated',
 				);
-
 				foreach ( $dates as $date ) {
 					if ( isset( $row[ $date ] ) && ! empty( $row[ $date ] ) ) {
 						$row[ $date ] = eac_format_datetime( $row[ $date ] );
 					}
 				}
-
 				$rows[] = $row;
 			}
 		}

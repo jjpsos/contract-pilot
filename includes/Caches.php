@@ -2,6 +2,8 @@
 
 namespace Otto;
 
+use Otto\Utilities\ReportsUtil;
+
 defined("ABSPATH") || exit();
 
 
@@ -19,14 +21,12 @@ class Caches
     
     public function clear_payment_cache()
     {
-        delete_transient("eac_payments_report");
-        delete_transient("eac_profits_report");
+        ReportsUtil::flush_report_caches();
     }
 
     
     public function clear_expense_cache()
     {
-        delete_transient("eac_expenses_report");
-        delete_transient("eac_profits_report");
+        ReportsUtil::flush_report_caches();
     }
 }

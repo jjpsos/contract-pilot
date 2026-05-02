@@ -18,7 +18,6 @@ class Settings
     public function __construct()
     {
         add_filter("eac_settings_page_tabs", [__CLASS__, "register_tabs"], -1);
-        add_filter("eac_settings_page_tabs", [__CLASS__, "strip_tools_tab"], 999);
         add_action("eac_settings_page_loaded", [__CLASS__, "save_settings"]);
         add_action("eac_settings_page_banking_accounts_content", [
             __CLASS__,
@@ -27,6 +26,10 @@ class Settings
         add_action("eac_settings_page_feature_access_content", [
             __CLASS__,
             "feature_access_tab",
+        ]);
+        add_action("eac_settings_page_tools_content", [
+            __CLASS__,
+            "settings_tools_tab",
         ]);
         add_action("eac_settings_page_general_content", [
             __CLASS__,
@@ -71,6 +74,9 @@ class Settings
         if (current_user_can("eac_manage_options")) {
             $ordered_tabs["feature_access"] = __("Feature Access", "otto-contracts");
         }
+        if (current_user_can("eac_manage_options")) {
+            $ordered_tabs["tools"] = __("Tools", "otto-contracts");
+        }
 
         $preferred_order = [
             "general",
@@ -78,6 +84,7 @@ class Settings
             "sales",
             "taxes",
             "purchases",
+            "tools",
             "banking_accounts",
             "feature_access",
         ];
@@ -92,19 +99,6 @@ class Settings
         foreach ($ordered_tabs as $tab_id => $tab_label) {
             $tabs[$tab_id] = $tab_label;
         }
-
-        return $tabs;
-    }
-
-    /**
-     * Remove Tools from Settings nav tabs (including if another callback re-adds it).
-     *
-     * @param array<string, string> $tabs
-     * @return array<string, string>
-     */
-    public static function strip_tools_tab($tabs)
-    {
-        unset($tabs["tools"]);
 
         return $tabs;
     }
@@ -134,6 +128,43 @@ class Settings
          admin_url("admin.php?page=eac-banking&tab=accounts"),
      ); ?>">
 						<?php esc_html_e("Open Banking Accounts", "otto-contracts"); ?>
+					</a>
+				</p>
+			</div>
+		</div>
+        <?php
+    }
+
+    /**
+     * Settings tab content: shortcuts to Import / Export on the Tools screen.
+     *
+     * @return void
+     */
+    public static function settings_tools_tab()
+    {
+        $import_url = admin_url("admin.php?page=eac-tools&tab=import");
+        $export_url = admin_url("admin.php?page=eac-tools&tab=export");
+        ?>
+		<div class="eac-card">
+			<div class="eac-card__header">
+				<h3 class="eac-card__title"><?php esc_html_e(
+        "Import and export",
+        "otto-contracts",
+    ); ?></h3>
+			</div>
+			<div class="eac-card__body">
+				<p><?php esc_html_e(
+        "CSV import and export run on the dedicated Tools screen.",
+        "otto-contracts",
+    ); ?></p>
+				<p>
+					<a class="button button-primary" href="<?php echo esc_url(
+         $import_url,
+     ); ?>">
+						<?php esc_html_e("Open Import", "otto-contracts"); ?>
+					</a>
+					<a class="button" href="<?php echo esc_url($export_url); ?>">
+						<?php esc_html_e("Open Export", "otto-contracts"); ?>
 					</a>
 				</p>
 			</div>

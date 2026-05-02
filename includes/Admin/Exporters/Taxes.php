@@ -37,8 +37,9 @@ class Taxes extends Exporter {
 
 		$args = apply_filters( 'eac_export_taxes_args', $args );
 
-		$items = EAC()->taxes->query( $args );
-		$rows  = array();
+		$items       = EAC()->taxes->query( $args );
+		$this->total = EAC()->taxes->query( $args, true );
+		$rows        = array();
 
 		foreach ( $items as $item ) {
 			$row = array();

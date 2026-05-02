@@ -347,7 +347,7 @@ class ReportsUtil
     public static function get_expenses_report($year = null, $force = true)
     {
         global $wpdb;
-        $reports = get_transient("get_expenses_report");
+        $reports = get_transient("eac_expenses_report");
         $reports = !is_array($reports) ? [] : $reports;
         $year = empty($year) ? wp_date("Y") : $year;
         $start_date = self::get_year_start_date($year);
@@ -449,7 +449,7 @@ class ReportsUtil
     public static function get_profits_report($year = null, $force = true)
     {
         global $wpdb;
-        $reports = get_transient("get_profits_report");
+        $reports = get_transient("eac_profits_report");
         $reports = !is_array($reports) ? [] : $reports;
         $year = empty($year) ? wp_date("Y") : $year;
         $start_date = self::get_year_start_date($year);
@@ -538,6 +538,25 @@ class ReportsUtil
         }
 
         return $reports[$year];
+    }
+
+    
+    /**
+     * Drop cached sales / expenses / profits report payloads so queries use current DB data.
+     * Also removes legacy transient keys from older versions that used mismatched names.
+     */
+    public static function flush_report_caches() {
+        foreach (
+            array(
+                'eac_payments_report',
+                'eac_expenses_report',
+                'eac_profits_report',
+                'get_expenses_report',
+                'get_profits_report',
+            ) as $key
+        ) {
+            delete_transient( $key );
+        }
     }
 
     

@@ -44,6 +44,10 @@ return [
         $baseDir . "/includes/Admin/Exporters/Categories.php",
     "Otto\\Admin\\Exporters\\Customers" =>
         $baseDir . "/includes/Admin/Exporters/Customers.php",
+    "Otto\\Admin\\Exporters\\DocumentItems" =>
+        $baseDir . "/includes/Admin/Exporters/DocumentItems.php",
+    "Otto\\Admin\\Exporters\\Documents" =>
+        $baseDir . "/includes/Admin/Exporters/Documents.php",
     "Otto\\Admin\\Exporters\\Expenses" =>
         $baseDir . "/includes/Admin/Exporters/Expenses.php",
     "Otto\\Admin\\Exporters\\Exporter" =>
@@ -56,8 +60,6 @@ return [
         $baseDir . "/includes/Admin/Exporters/Taxes.php",
     "Otto\\Admin\\Exporters\\Transfers" =>
         $baseDir . "/includes/Admin/Exporters/Transfers.php",
-    "Otto\\Admin\\Exporters\\Vendors" =>
-        $baseDir . "/includes/Admin/Exporters/Vendors.php",
     "Otto\\Admin\\Importers" => $baseDir . "/includes/Admin/Importers.php",
     "Otto\\Admin\\Importers\\Accounts" =>
         $baseDir . "/includes/Admin/Importers/Accounts.php",
@@ -65,6 +67,10 @@ return [
         $baseDir . "/includes/Admin/Importers/Categories.php",
     "Otto\\Admin\\Importers\\Customers" =>
         $baseDir . "/includes/Admin/Importers/Customers.php",
+    "Otto\\Admin\\Importers\\DocumentItems" =>
+        $baseDir . "/includes/Admin/Importers/DocumentItems.php",
+    "Otto\\Admin\\Importers\\Documents" =>
+        $baseDir . "/includes/Admin/Importers/Documents.php",
     "Otto\\Admin\\Importers\\Expenses" =>
         $baseDir . "/includes/Admin/Importers/Expenses.php",
     "Otto\\Admin\\Importers\\Importer" =>
@@ -77,8 +83,6 @@ return [
         $baseDir . "/includes/Admin/Importers/Taxes.php",
     "Otto\\Admin\\Importers\\Transfers" =>
         $baseDir . "/includes/Admin/Importers/Transfers.php",
-    "Otto\\Admin\\Importers\\Vendors" =>
-        $baseDir . "/includes/Admin/Importers/Vendors.php",
     "Otto\\Admin\\Invoices" => $baseDir . "/includes/Admin/Invoices.php",
     "Otto\\Admin\\Items" => $baseDir . "/includes/Admin/Items.php",
     "Otto\\Admin\\ListTables\\Accounts" =>

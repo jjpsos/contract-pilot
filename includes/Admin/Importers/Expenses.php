@@ -13,18 +13,17 @@ class Expenses extends Importer {
 			'date_updated',
 		);
 
-		$data  = array_diff_key( $data, array_flip( $protected ) );
-		$dates = array(
-			'payment_date',
-			'date_created',
-			'date_updated',
-		);
+		$data = array_diff_key( $data, array_flip( $protected ) );
 
-		foreach ( $dates as $date ) {
-			if ( isset( $data[ $date ] ) && ! empty( $data[ $date ] ) ) {
-				$data[ $date ] = get_gmt_from_date( $data[ $date ] );
-			}
-		}
+		$this->normalize_import_datetime_fields(
+			$data,
+			array(
+				'payment_date',
+				'date_created',
+				'date_updated',
+			)
+		);
+		$this->normalize_transaction_import_row( $data );
 
 		return EAC()->expenses->insert( $data );
 	}

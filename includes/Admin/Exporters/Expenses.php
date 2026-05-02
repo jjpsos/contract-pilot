@@ -32,8 +32,9 @@ class Expenses extends Exporter {
 
 		$args = apply_filters( 'eac_export_expenses_args', $args );
 
-		$items = EAC()->expenses->query( $args );
-		$rows  = array();
+		$items       = EAC()->expenses->query( $args );
+		$this->total = EAC()->expenses->query( $args, true );
+		$rows        = array();
 
 		foreach ( $items as $item ) {
 			$row = array();

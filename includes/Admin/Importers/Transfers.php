@@ -13,18 +13,20 @@ class Transfers extends Importer {
 			'date_updated',
 		);
 
-		$data  = array_diff_key( $data, array_flip( $protected ) );
-		$dates = array(
-			'transfer_date',
-			'date_created',
-			'date_updated',
-		);
+		$data = array_diff_key( $data, array_flip( $protected ) );
 
-		foreach ( $dates as $date ) {
-			if ( isset( $data[ $date ] ) && ! empty( $data[ $date ] ) ) {
-				$data[ $date ] = get_gmt_from_date( $data[ $date ] );
-			}
-		}
+		$this->normalize_import_datetime_fields(
+			$data,
+			array(
+				'transfer_date',
+				'date_created',
+				'date_updated',
+			)
+		);
+		$this->normalize_transaction_import_row(
+			$data,
+			array( 'expense_id', 'payment_id', 'from_account_id', 'to_account_id' )
+		);
 
 		return EAC()->transfers->insert( $data );
 	}

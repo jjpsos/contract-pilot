@@ -32,8 +32,9 @@ class Categories extends Exporter {
 
 		$args = apply_filters( 'eac_export_categories_args', $args );
 
-		$items = EAC()->categories->query( $args );
-		$rows  = array();
+		$items       = EAC()->categories->query( $args );
+		$this->total = EAC()->categories->query( $args, true );
+		$rows        = array();
 
 		foreach ( $items as $item ) {
 			$row = array();

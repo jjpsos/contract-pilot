@@ -4,21 +4,21 @@
 namespace Otto\Admin\Exporters;
 
 use Otto\Models\Document;
-use Otto\Models\Payment;
+use Otto\Models\DocumentItem;
 
 defined( 'ABSPATH' ) || exit();
 
 
+/**
+ * CSV export for {@see DocumentItem} rows (otto_document_items).
+ */
+class DocumentItems extends Exporter {
 
-class Payments extends Exporter {
+	public $export_type = 'document_items';
 
-	
-	public $export_type = 'payments';
-
-	
 	public function get_columns() {
-		$hidden  = array( 'id', 'user_id', 'type', 'uuid', 'author_id', 'parent_id', 'created_via' );
-		$columns = array_values( array_diff( ( new Payment() )->get_columns(), $hidden ) );
+		$hidden  = array( 'id' );
+		$columns = array_values( array_diff( ( new DocumentItem() )->get_columns(), $hidden ) );
 		foreach ( array( 'document_number', 'document_type' ) as $extra ) {
 			if ( ! in_array( $extra, $columns, true ) ) {
 				$columns[] = $extra;
@@ -28,7 +28,6 @@ class Payments extends Exporter {
 		return $columns;
 	}
 
-	
 	public function get_rows() {
 		$args = array(
 			'orderby' => 'id',
@@ -37,10 +36,10 @@ class Payments extends Exporter {
 			'limit'   => $this->limit,
 		);
 
-		$args = apply_filters( 'eac_export_payments_args', $args );
+		$args = apply_filters( 'eac_export_document_items_args', $args );
 
-		$items       = EAC()->payments->query( $args );
-		$this->total = EAC()->payments->query( $args, true );
+		$items       = DocumentItem::results( $args );
+		$this->total = DocumentItem::count( $args );
 		$rows        = array();
 
 		foreach ( $items as $item ) {
@@ -60,22 +59,9 @@ class Payments extends Exporter {
 					default:
 						$value = isset( $item->{$column} ) ? $item->{$column} : null;
 				}
-
 				$row[ $column ] = $value;
 			}
 			if ( ! empty( $row ) ) {
-				$dates = array(
-					'payment_date',
-					'date_created',
-					'date_updated',
-				);
-
-				foreach ( $dates as $date ) {
-					if ( isset( $row[ $date ] ) && ! empty( $row[ $date ] ) ) {
-						$row[ $date ] = eac_format_datetime( $row[ $date ] );
-					}
-				}
-
 				$rows[] = $row;
 			}
 		}

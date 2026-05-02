@@ -32,8 +32,9 @@ class Items extends Exporter {
 
 		$args = apply_filters( 'eac_export_items_args', $args );
 
-		$items = EAC()->items->query( $args );
-		$rows  = array();
+		$items       = EAC()->items->query( $args );
+		$this->total = EAC()->items->query( $args, true );
+		$rows        = array();
 
 		foreach ( $items as $item ) {
 			$row = array();
