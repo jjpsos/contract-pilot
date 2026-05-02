@@ -3,7 +3,7 @@
  * Plugin Name:       Otto Contracts
  * Plugin URI:        https://www.softestate.net/
  * Description:       Manage client's contracts.
- * Version:           9.30.3
+ * Version:           9.30.4
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            RightScript

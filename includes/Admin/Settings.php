@@ -18,12 +18,12 @@ class Settings
     public function __construct()
     {
         add_filter("eac_settings_page_tabs", [__CLASS__, "register_tabs"], -1);
+        add_filter("eac_settings_page_tabs", [__CLASS__, "strip_tools_tab"], 999);
         add_action("eac_settings_page_loaded", [__CLASS__, "save_settings"]);
         add_action("eac_settings_page_banking_accounts_content", [
             __CLASS__,
             "banking_accounts_tab",
         ]);
-        add_action("eac_settings_page_tools_content", [__CLASS__, "tools_tab"]);
         add_action("eac_settings_page_feature_access_content", [
             __CLASS__,
             "feature_access_tab",
@@ -69,7 +69,6 @@ class Settings
             );
         }
         if (current_user_can("eac_manage_options")) {
-            $ordered_tabs["tools"] = __("Tools", "otto-contracts");
             $ordered_tabs["feature_access"] = __("Feature Access", "otto-contracts");
         }
 
@@ -80,7 +79,6 @@ class Settings
             "taxes",
             "purchases",
             "banking_accounts",
-            "tools",
             "feature_access",
         ];
 
@@ -94,6 +92,19 @@ class Settings
         foreach ($ordered_tabs as $tab_id => $tab_label) {
             $tabs[$tab_id] = $tab_label;
         }
+
+        return $tabs;
+    }
+
+    /**
+     * Remove Tools from Settings nav tabs (including if another callback re-adds it).
+     *
+     * @param array<string, string> $tabs
+     * @return array<string, string>
+     */
+    public static function strip_tools_tab($tabs)
+    {
+        unset($tabs["tools"]);
 
         return $tabs;
     }
@@ -123,35 +134,6 @@ class Settings
          admin_url("admin.php?page=eac-banking&tab=accounts"),
      ); ?>">
 						<?php esc_html_e("Open Banking Accounts", "otto-contracts"); ?>
-					</a>
-				</p>
-			</div>
-		</div>
-		<?php
-    }
-
-    /**
-     * Settings tab content: shortcut to tools page.
-     *
-     * @return void
-     */
-    public static function tools_tab()
-    {
-        ?>
-		<div class="eac-card">
-			<div class="eac-card__header">
-				<h3 class="eac-card__title"><?php esc_html_e("Tools", "otto-contracts"); ?></h3>
-			</div>
-			<div class="eac-card__body">
-				<p><?php esc_html_e(
-        "Manage import and export tools from the Tools section.",
-        "otto-contracts",
-    ); ?></p>
-				<p>
-					<a class="button button-primary" href="<?php echo esc_url(
-         admin_url("admin.php?page=eac-tools"),
-     ); ?>">
-						<?php esc_html_e("Open Tools", "otto-contracts"); ?>
 					</a>
 				</p>
 			</div>
