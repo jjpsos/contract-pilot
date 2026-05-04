@@ -143,14 +143,33 @@ class Dashboard
          "Otto Contracts helps you manage contracts and related business records in WordPress.",
          "otto-contracts"
      ); ?></p>
-					<p style="margin: 0 0 8px;"><?php esc_html_e(
-         "It builds on a structured admin UI and REST-oriented workflows suitable for small businesses.",
-         "otto-contracts"
-     ); ?></p>
-					<p style="margin-bottom: 8px;">
+					<p style="margin: 0 0 8px;">
 						<?php esc_html_e("Go to", "otto-contracts"); ?>
 						<a href="https://www.softestate.net/otto-contracts/" target="_blank" rel="noopener noreferrer">https://www.softestate.net/otto-contracts/</a>
 						<?php esc_html_e("for a showcase of advanced features.", "otto-contracts"); ?>
+					</p>
+					<p style="margin: 0 0 8px;">
+						<?php
+     $contribution_url = "https://www.softestate.net/contribution/";
+     echo wp_kses(
+         sprintf(
+             /* translators: %1$s: contribution page URL (href), %2$s: same URL as visible link text */
+             __(
+                 'Thank you for your aid, <a href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>, to this open source project.',
+                 "otto-contracts",
+             ),
+             esc_url($contribution_url),
+             esc_html($contribution_url),
+         ),
+         [
+             "a" => [
+                 "href" => true,
+                 "target" => true,
+                 "rel" => true,
+             ],
+         ],
+     );
+?>
 					</p>
 				<?php endif; ?>
 				<form method="post" action="">

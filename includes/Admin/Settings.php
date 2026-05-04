@@ -359,7 +359,7 @@ class Settings
 
         wp_die(
             esc_html__(
-                "Banking/Tools are locked. Enter your access code in Settings > Feature Access.",
+                "Custom Add-ons. Enter your access code in Settings > Feature Access.",
                 "otto-contracts"
             )
         );

@@ -55,11 +55,11 @@ class Profits
 			</div>
 			<div class="eac-stat">
 				<div class="eac-stat__label"><?php esc_html_e(
-        "Daily Avg.",
+        "Profit - Aid",
         "otto-contracts",
     ); ?></div>
 				<div class="eac-stat__value"><?php echo esc_html(
-        eac_format_amount($data["daily_avg"]),
+        eac_format_amount($data["profit_aid"]),
     ); ?></div>
 			</div>
 		</div>

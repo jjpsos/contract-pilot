@@ -354,7 +354,11 @@ class ReportsUtil
         $end_date = self::get_year_end_date($year);
         $date_format = "M, y";
 
-        if ($force || !isset($reports[$year])) {
+        if (
+            $force ||
+            !isset($reports[$year]) ||
+            !array_key_exists("monthly_aid", $reports[$year])
+        ) {
             $date_column = self::get_localized_time_sql("t.payment_date");
             
             $transactions = $wpdb->get_results(
@@ -382,7 +386,7 @@ class ReportsUtil
             $data = [
                 "total_amount" => 0,
                 "total_count" => 0,
-                "daily_avg" => 0,
+                "monthly_aid" => 0,
                 "month_avg" => 0,
                 "date_count" => $date_count,
                 "months" => $months,
@@ -419,19 +423,18 @@ class ReportsUtil
             }
 
             
-            if ($date_count > 0 && $data["total_amount"] > 0) {
-                $data["daily_avg"] = round(
-                    $data["total_amount"] / $date_count,
-                    2,
-                );
-            }
-            
             if ($data["total_amount"] > 0 && $month_count > 0) {
                 $data["month_avg"] = round(
                     $data["total_amount"] / $month_count,
                     2,
                 );
             }
+
+            $sales_report = self::get_payments_report($year, $force);
+            $sales_month_avg = !empty($sales_report["month_avg"])
+                ? (float) $sales_report["month_avg"]
+                : 0.0;
+            $data["monthly_aid"] = round($sales_month_avg * 0.023, 2);
 
             $reports[$year] = apply_filters(
                 "eac_expenses_report",
@@ -455,7 +458,11 @@ class ReportsUtil
         $start_date = self::get_year_start_date($year);
         $end_date = self::get_year_end_date($year);
         $date_format = "M, y";
-        if ($force || !isset($reports[$year])) {
+        if (
+            $force ||
+            !isset($reports[$year]) ||
+            !array_key_exists("profit_aid", $reports[$year])
+        ) {
             $date_column = self::get_localized_time_sql("t.payment_date");
 
             
@@ -483,7 +490,7 @@ class ReportsUtil
             $data = [
                 "total_profit" => 0,
                 "total_count" => 0,
-                "daily_avg" => 0,
+                "profit_aid" => 0,
                 "month_avg" => 0,
                 "date_count" => $date_count,
                 "payments" => $months,
@@ -517,20 +524,22 @@ class ReportsUtil
             }
 
             
-            if ($date_count > 0 && $data["total_profit"] > 0) {
-                $data["daily_avg"] = round(
-                    $data["total_profit"] / $date_count,
-                    2,
-                );
-            }
-
-            
             if ($month_count > 0 && $data["total_profit"] > 0) {
                 $data["month_avg"] = round(
                     $data["total_profit"] / $month_count,
                     2,
                 );
             }
+
+            $expenses_report = self::get_expenses_report($year, $force);
+            $monthly_aid = isset($expenses_report["monthly_aid"])
+                ? (float) $expenses_report["monthly_aid"]
+                : 0.0;
+            $annual_aid = $monthly_aid * 12;
+            $data["profit_aid"] = round(
+                abs($annual_aid - (float) $data["total_profit"]),
+                2,
+            );
 
             $reports[$year] = apply_filters("eac_profits_report", $data, $year);
             

@@ -2,17 +2,21 @@
 /**
  * Plugin Name:       Otto Contracts
  * Plugin URI:        https://www.softestate.net/
- * Description:       Manage client's contracts.
+ * Description:       Manage contracts and related business records in WordPress. Showcase: https://www.softestate.net/otto-contracts/
  * Version:           9.33.3
  * Requires at least: 6.0
  * Requires PHP:      7.4
- * Author:            RightScript
+ * Author:            jjpsos
  * Author URI:        https://www.softestate.net/
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       otto-contracts
  * Domain Path:       /languages
  *
+ * Copyright (C) 2026 James Sosontovich (jjpsos), RightScript (ReeSol)
+ * Released under the GNU General Public License v2 or later.
+ * Named contributors and copyright notices are part of the GPL
+ * license grant; retain them in copies and derivative works.
  */
 
 defined("ABSPATH") || exit();

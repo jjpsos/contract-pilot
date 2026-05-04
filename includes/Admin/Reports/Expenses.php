@@ -57,11 +57,11 @@ class Expenses
 			</div>
 			<div class="eac-stat">
 				<div class="eac-stat__label"><?php esc_html_e(
-        "Daily Avg.",
+        "Monthly Aid",
         "otto-contracts",
     ); ?></div>
 				<div class="eac-stat__value"><?php echo esc_html(
-        eac_format_amount($data["daily_avg"]),
+        eac_format_amount($data["monthly_aid"]),
     ); ?></div>
 			</div>
 		</div>
