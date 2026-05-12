@@ -13,7 +13,7 @@ Contract Pilot helps you manage contracts and related business records in WordPr
 
 == Description ==
 
-Contract Pilot helps you manage contracts and related business records in WordPress. Go to https://www.softestate.net/otto-contracts/ for a showcase of advanced features. Thank you for your aid, https://www.softestate.net/contribution/, to this open source project.
+Contract Pilot helps you manage contracts and related business records in WordPress. Go to https://www.softestate.net/contract-pilot/ for a showcase of advanced features. Thank you for your aid, https://www.softestate.net/contribution/, to this open source project.
 
 See the Credits section for copyright holders, bundled libraries, and GPL attribution requirements.
 
