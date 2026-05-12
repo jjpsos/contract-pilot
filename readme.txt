@@ -1,4 +1,4 @@
-=== Otto Contracts ===
+=== Contract Pilot ===
 Contributors: jjpsos
 Donate link: https://www.softestate.net/contribution/
 Tags: accounting, business, contracts
@@ -9,19 +9,17 @@ Stable tag: 9.33.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Otto Contracts helps you manage contracts and related business records in WordPress. Visit the plugin site for features, contribute to the project, and watch the video demo.
+Contract Pilot helps you manage contracts and related business records in WordPress. Visit the plugin site for features, contribute to the project, and watch the video demo.
 
 == Description ==
 
-Otto Contracts helps you manage contracts and related business records in WordPress. Go to https://www.softestate.net/otto-contracts/ for a showcase of advanced features. Thank you for your aid, https://www.softestate.net/contribution/, to this open source project.
-
-A video demo is available at https://www.softestate.net/media/
+Contract Pilot helps you manage contracts and related business records in WordPress. Go to https://www.softestate.net/otto-contracts/ for a showcase of advanced features. Thank you for your aid, https://www.softestate.net/contribution/, to this open source project.
 
 See the Credits section for copyright holders, bundled libraries, and GPL attribution requirements.
 
 == Credits ==
 
-This plugin includes work by James Sosontovich (jjpsos) and RightScript (ReeSol) (see the root LICENSE file and plugin source headers). Additional contributors appear in bundled third-party libraries under the vendor directory. All named authors and copyright lines are part of this plugin’s GPL-licensed distribution and must be preserved in copies and derivatives, as required by the GNU General Public License.
+This plugin includes work by James Sosontovich (jjpsos) (see the root LICENSE file and plugin source headers). Additional contributors appear in bundled third-party libraries under the vendor directory. All named authors and copyright lines are part of this plugin’s GPL-licensed distribution and must be preserved in copies and derivatives, as required by the GNU General Public License.
 
 Bundled third-party code includes WooCommerce Action Scheduler (GPLv3, Automattic and contributors), ByteKit-related packages (GPL-3.0+, Sultan Nasir Uddin / Byteever), Composer class loader components, and other dependencies shipped in the vendor directory. See each package for its full license and copyright notices.
 
@@ -57,7 +55,7 @@ Use the plugin support forum on WordPress.org once the plugin is listed, or the 
 
 == Features ==
 
-* Admin Dashboard with sales, expenses, and profits reporting tabs; overview chart; recent payments, expenses, and contracts; top services, customers, and vendors.
+* Admin Dashboard with sales, expenses, and profits reporting tabs; overview chart.
 * Services (items catalog) for billable work used on documents.
 * Contracts (sales side): contracts/invoices, payments, and customers.
 * Purchases: expenses and aid.
@@ -74,7 +72,7 @@ Use the plugin support forum on WordPress.org once the plugin is listed, or the 
 
 = 9.33.3 =
 * WordPress.org readme: description, installation, FAQ, features, credits, Donate link, and contribution URLs.
-* Copyright: James Sosontovich, RightScript (ReeSol); plugin header and LICENSE updated.
+* Copyright: James Sosontovich; plugin header and LICENSE updated.
 * Initial public listing preparation: documentation, text domain, and compatibility updates; LICENSE and uninstall.php for packaging.
 
 == Upgrade Notice ==
