@@ -1,0 +1,2757 @@
+# Copyright (C) 2026 jjpsos
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contract Pilot 9.47.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/contract-pilot\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-11T14:09:01+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: contract-pilot\n"
+
+#. Plugin Name of the plugin
+#: contract-pilot.php
+#: includes/Admin/Menus.php:56
+#: includes/Admin/Menus.php:57
+#: includes/Admin/Request.php:52
+#: includes/Admin/Request.php:115
+#: templates/site-header.php:16
+msgid "Contract Pilot"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: contract-pilot.php
+msgid "https://www.softestate.net/"
+msgstr ""
+
+#. Description of the plugin
+#: contract-pilot.php
+msgid "Manage contracts and related business records."
+msgstr ""
+
+#. Author of the plugin
+#: contract-pilot.php
+msgid "jjpsos"
+msgstr ""
+
+#: includes/Admin/Accounts.php:54
+#: includes/Admin/ListTables/Expenses.php:146
+#: includes/Admin/ListTables/Payments.php:162
+#: includes/Admin/views/screens/expense-edit.php:65
+#: includes/Admin/views/screens/invoice-view.php:114
+#: includes/Admin/views/screens/payment-edit.php:65
+msgid "Account"
+msgstr ""
+
+#: includes/Admin/Accounts.php:65
+#: includes/Admin/Accounts.php:127
+msgid "You do not have permission to edit accounts."
+msgstr ""
+
+#: includes/Admin/Accounts.php:89
+msgid "Account saved successfully."
+msgstr ""
+
+#: includes/Admin/Accounts.php:111
+msgid "You do not have permission to add accounts."
+msgstr ""
+
+#: includes/Admin/Accounts.php:118
+msgid "You attempted to retrieve an account that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Accounts.php:138
+msgid "Number of accounts per page:"
+msgstr ""
+
+#. translators: %s: plugin name (may contain HTML markup)
+#: includes/Admin/Admin.php:56
+#, php-format
+msgid "Thank you for using %s!"
+msgstr ""
+
+#. translators: %s: "here" link HTML to leave a review
+#: includes/Admin/Admin.php:62
+#, php-format
+msgid " Share your appreciation with a five-star review %s."
+msgstr ""
+
+#. translators: %s: plugin version number
+#: includes/Admin/Admin.php:88
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: includes/Admin/Ajax.php:54
+msgid "You do not have permission to perform this search."
+msgstr ""
+
+#: includes/Admin/Ajax.php:181
+msgid "(No title)"
+msgstr ""
+
+#: includes/Admin/Ajax.php:317
+#: includes/Admin/Ajax.php:363
+#: includes/Admin/Ajax.php:393
+#: includes/Admin/Invoices.php:249
+#: includes/Admin/Invoices.php:287
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/Admin/Ajax.php:329
+msgid "Service not found."
+msgstr ""
+
+#: includes/Admin/Ajax.php:375
+#: includes/Admin/Ajax.php:430
+msgid "Contract not found."
+msgstr ""
+
+#: includes/Admin/Ajax.php:442
+msgid "Account not found."
+msgstr ""
+
+#: includes/Admin/Ajax.php:497
+msgid "Payment added successfully."
+msgstr ""
+
+#: includes/Admin/Categories.php:35
+#: includes/Admin/views/screens/category-list.php:17
+msgid "Categories"
+msgstr ""
+
+#: includes/Admin/Categories.php:47
+msgid "You do not have permission to edit categories."
+msgstr ""
+
+#: includes/Admin/Categories.php:68
+msgid "Category saved successfully."
+msgstr ""
+
+#: includes/Admin/Categories.php:93
+msgid "Number of categories per page:"
+msgstr ""
+
+#: includes/Admin/Customers.php:51
+msgid "Clients"
+msgstr ""
+
+#: includes/Admin/Customers.php:62
+#: includes/Admin/Customers.php:153
+msgid "You do not have permission to edit customers."
+msgstr ""
+
+#: includes/Admin/Customers.php:112
+msgid "Customer saved successfully."
+msgstr ""
+
+#: includes/Admin/Customers.php:129
+msgid "You do not have permission to add customers."
+msgstr ""
+
+#: includes/Admin/Customers.php:138
+msgid "You attempted to retrieve a customer that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Customers.php:147
+msgid "You do not have permission to view customers."
+msgstr ""
+
+#: includes/Admin/Customers.php:164
+#: includes/Admin/Expenses.php:202
+#: includes/Admin/Payments.php:258
+#: includes/Admin/Transfers.php:136
+msgid "Number of items per page:"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:80
+#: includes/Admin/ScreenViewData.php:528
+#: includes/Admin/ScreenViewData.php:607
+msgid "Incoming"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:84
+#: includes/Admin/ScreenViewData.php:543
+#: includes/Admin/ScreenViewData.php:612
+msgid "Outgoing"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:88
+#: includes/Admin/Reports/Profits.php:99
+msgid "Profit"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:102
+#: includes/Admin/Settings/Sales.php:12
+msgid "Sales"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:106
+#: includes/Admin/Expenses.php:34
+#: includes/Admin/Reports/Profits.php:91
+#: includes/Admin/ScreenViewData.php:425
+#: includes/Admin/views/screens/expense-list.php:16
+msgid "Expenses"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:114
+msgid "Profit/Loss"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:126
+#: includes/Admin/ScreenViewData.php:417
+#: includes/Admin/ScreenViewData.php:442
+#: includes/Admin/ScreenViewData.php:599
+#: includes/Admin/ScreenViewData.php:675
+msgid "Overview"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:146
+msgid "Percentage of profit"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:182
+msgid "Receivable"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:199
+#: includes/Admin/views/partials/payments-table.php:12
+msgid "Recent Payments"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:201
+#: includes/Admin/Dashboard.php:244
+#: includes/Admin/Dashboard.php:287
+#: includes/Admin/Dashboard.php:350
+#: includes/Admin/Dashboard.php:412
+msgid "View all"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:208
+#: includes/Admin/ListTables/Payments.php:160
+#: includes/Admin/views/screens/payment-edit.php:52
+#: templates/content-invoice.php:166
+msgid "Payment #"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:209
+#: includes/Admin/Dashboard.php:252
+#: includes/Admin/Dashboard.php:295
+#: includes/Admin/ListTables/Accounts.php:192
+#: includes/Admin/ListTables/Customers.php:139
+#: includes/Admin/ListTables/Expenses.php:145
+#: includes/Admin/ListTables/Items.php:179
+#: includes/Admin/ListTables/Payments.php:161
+#: includes/Admin/ListTables/Transfers.php:152
+#: includes/Admin/views/partials/expenses-table.php:17
+#: includes/Admin/views/partials/invoices-table.php:17
+#: includes/Admin/views/partials/payments-table.php:17
+#: includes/Admin/views/screens/expense-edit.php:39
+#: includes/Admin/views/screens/payment-edit.php:39
+#: includes/Admin/views/screens/transfer-edit.php:102
+#: templates/content-expense.php:26
+#: templates/content-invoice.php:167
+#: templates/content-payment.php:102
+msgid "Date"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:210
+#: includes/Admin/Dashboard.php:253
+#: includes/Admin/Dashboard.php:296
+#: includes/Admin/Dashboard.php:420
+#: includes/Admin/ListTables/Expenses.php:148
+#: includes/Admin/ListTables/Payments.php:166
+#: includes/Admin/ListTables/Transfers.php:156
+#: includes/Admin/views/partials/expenses-table.php:19
+#: includes/Admin/views/partials/payments-table.php:19
+#: includes/Admin/views/screens/expense-edit.php:91
+#: includes/Admin/views/screens/invoice-view.php:122
+#: includes/Admin/views/screens/payment-edit.php:91
+#: includes/Admin/views/screens/transfer-edit.php:88
+#: templates/content-expense.php:36
+#: templates/content-invoice.php:169
+#: templates/content-payment.php:98
+msgid "Amount"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:225
+#: includes/Admin/ListTables/Payments.php:113
+#: includes/Admin/views/partials/payments-table.php:44
+msgid "No payments found."
+msgstr ""
+
+#: includes/Admin/Dashboard.php:242
+#: includes/Admin/views/partials/expenses-table.php:12
+msgid "Recent Expenses"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:251
+#: includes/Admin/ListTables/Expenses.php:144
+#: includes/Admin/views/screens/expense-edit.php:52
+msgid "Expense #"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:268
+#: includes/Admin/ListTables/Expenses.php:105
+#: includes/Admin/views/partials/expenses-table.php:42
+msgid "No expenses found."
+msgstr ""
+
+#: includes/Admin/Dashboard.php:285
+msgid "Recent Contracts"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:294
+#: includes/Admin/ListTables/Invoices.php:264
+msgid "Contract #"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:311
+#: includes/Admin/views/partials/invoices-table.php:38
+msgid "No invoices found."
+msgstr ""
+
+#: includes/Admin/Dashboard.php:348
+msgid "Top Items"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:357
+#: includes/Repositories/Categories.php:53
+#: includes/Repositories/Invoices.php:75
+msgid "Service"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:358
+msgid "Total Sales"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:376
+#: includes/Admin/Dashboard.php:438
+msgid "No data found."
+msgstr ""
+
+#: includes/Admin/Dashboard.php:410
+msgid "Top Customers"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:419
+#: includes/Admin/ListTables/Payments.php:163
+#: includes/Admin/views/screens/payment-edit.php:132
+#: includes/Repositories/Contacts.php:53
+msgid "Customer"
+msgstr ""
+
+#: includes/Admin/Expenses.php:46
+#: includes/Admin/Expenses.php:189
+msgid "You do not have permission to edit expenses."
+msgstr ""
+
+#: includes/Admin/Expenses.php:98
+msgid "Expense saved successfully."
+msgstr ""
+
+#: includes/Admin/Expenses.php:114
+msgid "You do not have permission to update expense."
+msgstr ""
+
+#: includes/Admin/Expenses.php:126
+msgid "Expense not found."
+msgstr ""
+
+#: includes/Admin/Expenses.php:143
+msgid "Expense updated successfully."
+msgstr ""
+
+#: includes/Admin/Expenses.php:170
+msgid "You do not have permission to add expenses."
+msgstr ""
+
+#: includes/Admin/Expenses.php:178
+msgid "You attempted to retrieve a expense that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Expenses.php:183
+msgid "You do not have permission to view expenses."
+msgstr ""
+
+#: includes/Admin/Invoices.php:48
+#: includes/Admin/ScreenViewData.php:450
+#: includes/Admin/Settings/Sales.php:20
+msgid "Contracts/Bills"
+msgstr ""
+
+#: includes/Admin/Invoices.php:125
+#: includes/Admin/Invoices.php:372
+msgid "You do not have permission to edit contracts."
+msgstr ""
+
+#: includes/Admin/Invoices.php:235
+msgid "Contract saved successfully."
+msgstr ""
+
+#: includes/Admin/Invoices.php:254
+#: includes/Admin/Invoices.php:292
+msgid "Invalid request."
+msgstr ""
+
+#: includes/Admin/Invoices.php:260
+#: includes/Admin/Invoices.php:298
+msgid "You attempted to perform an action on a contract that does not exist."
+msgstr ""
+
+#: includes/Admin/Invoices.php:269
+msgid "Contract marked as sent."
+msgstr ""
+
+#: includes/Admin/Invoices.php:273
+msgid "Failed to mark contract as sent."
+msgstr ""
+
+#: includes/Admin/Invoices.php:317
+msgid "Contract marked as accepted."
+msgstr ""
+
+#: includes/Admin/Invoices.php:321
+msgid "Failed to mark contract as accepted."
+msgstr ""
+
+#: includes/Admin/Invoices.php:337
+msgid "You do not have permission to add contracts."
+msgstr ""
+
+#: includes/Admin/Invoices.php:346
+msgid "You attempted to retrieve a contract that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Invoices.php:357
+msgid "You attempted to edit a contract that is not editable."
+msgstr ""
+
+#: includes/Admin/Invoices.php:366
+msgid "You do not have permission to view contracts."
+msgstr ""
+
+#: includes/Admin/Invoices.php:383
+msgid "Number of contracts per page:"
+msgstr ""
+
+#: includes/Admin/Items.php:28
+#: includes/Admin/Utilities.php:16
+#: includes/Admin/Utilities.php:17
+#: includes/Admin/views/screens/item-list.php:17
+msgid "Services"
+msgstr ""
+
+#: includes/Admin/Items.php:39
+#: includes/Admin/Items.php:108
+msgid "You do not have permission to edit services."
+msgstr ""
+
+#: includes/Admin/Items.php:80
+msgid "Service saved successfully."
+msgstr ""
+
+#: includes/Admin/Items.php:97
+msgid "You do not have permission to add services."
+msgstr ""
+
+#: includes/Admin/Items.php:104
+msgid "You attempted to retrieve a service that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Items.php:118
+msgid "Number of services per page:"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:64
+msgid "You do not have permission to update account balance."
+msgstr ""
+
+#. translators: %s: number of accounts updated (formatted).
+#: includes/Admin/ListTables/Accounts.php:84
+#, php-format
+msgid "%s account(s) balance updated successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:99
+msgid "You do not have permission to delete accounts."
+msgstr ""
+
+#. translators: %s: number of accounts deleted (formatted).
+#: includes/Admin/ListTables/Accounts.php:117
+#, php-format
+msgid "%s account(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:130
+msgid "No accounts found."
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:139
+#: includes/Admin/ListTables/Categories.php:93
+#: includes/Admin/ListTables/Invoices.php:164
+#: includes/Admin/ListTables/Items.php:108
+msgid "All"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:172
+msgid "Update Balance"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:179
+#: includes/Admin/ListTables/Accounts.php:273
+#: includes/Admin/ListTables/Categories.php:124
+#: includes/Admin/ListTables/Categories.php:232
+#: includes/Admin/ListTables/Customers.php:100
+#: includes/Admin/ListTables/Customers.php:233
+#: includes/Admin/ListTables/Expenses.php:114
+#: includes/Admin/ListTables/Expenses.php:233
+#: includes/Admin/ListTables/Invoices.php:205
+#: includes/Admin/ListTables/Invoices.php:400
+#: includes/Admin/ListTables/Items.php:141
+#: includes/Admin/ListTables/Items.php:291
+#: includes/Admin/ListTables/Payments.php:122
+#: includes/Admin/ListTables/Payments.php:306
+#: includes/Admin/ListTables/Taxes.php:91
+#: includes/Admin/ListTables/Taxes.php:201
+#: includes/Admin/ListTables/Transfers.php:141
+#: includes/Admin/ListTables/Transfers.php:271
+#: includes/Admin/views/screens/account-edit.php:109
+#: includes/Admin/views/screens/category-edit.php:86
+#: includes/Admin/views/screens/customer-edit.php:200
+#: includes/Admin/views/screens/expense-edit.php:185
+#: includes/Admin/views/screens/expense-view.php:55
+#: includes/Admin/views/screens/invoice-edit.php:226
+#: includes/Admin/views/screens/invoice-view.php:88
+#: includes/Admin/views/screens/item-edit.php:172
+#: includes/Admin/views/screens/payment-edit.php:225
+#: includes/Admin/views/screens/payment-view.php:58
+#: includes/Admin/views/screens/tax-edit.php:88
+#: includes/Admin/views/screens/transfer-edit.php:170
+msgid "Delete"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:190
+#: includes/Admin/ListTables/Categories.php:140
+#: includes/Admin/ListTables/Customers.php:135
+#: includes/Admin/ListTables/Items.php:175
+#: includes/Admin/ListTables/Taxes.php:102
+#: includes/Admin/ScreenViewData.php:573
+#: includes/Admin/ScreenViewData.php:648
+#: includes/Admin/Settings/General.php:36
+#: includes/Admin/views/partials/invoice-items.php:50
+#: includes/Admin/views/screens/account-edit.php:40
+#: includes/Admin/views/screens/category-edit.php:41
+#: includes/Admin/views/screens/customer-edit.php:41
+#: includes/Admin/views/screens/item-edit.php:42
+#: includes/Admin/views/screens/tax-edit.php:39
+msgid "Name"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:191
+#: includes/Admin/ScreenViewData.php:577
+#: includes/Admin/views/partials/expenses-table.php:16
+#: includes/Admin/views/partials/invoices-table.php:16
+#: includes/Admin/views/partials/payments-table.php:16
+#: includes/Admin/views/screens/account-edit.php:51
+msgid "Number"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:193
+#: includes/Admin/ScreenViewData.php:558
+msgid "Balance"
+msgstr ""
+
+#: includes/Admin/ListTables/Accounts.php:257
+#: includes/Admin/ListTables/Categories.php:216
+#: includes/Admin/ListTables/Customers.php:217
+#: includes/Admin/ListTables/Expenses.php:217
+#: includes/Admin/ListTables/Invoices.php:384
+#: includes/Admin/ListTables/Items.php:275
+#: includes/Admin/ListTables/Payments.php:290
+#: includes/Admin/ListTables/Taxes.php:184
+#: includes/Admin/ListTables/Transfers.php:255
+#: includes/Admin/views/screens/expense-view.php:39
+#: includes/Admin/views/screens/invoice-view.php:52
+#: includes/Admin/views/screens/payment-view.php:42
+msgid "Edit"
+msgstr ""
+
+#. translators: %s: number of categories deleted (formatted).
+#: includes/Admin/ListTables/Categories.php:71
+#, php-format
+msgid "%s category(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Categories.php:84
+msgid "No categories found."
+msgstr ""
+
+#: includes/Admin/ListTables/Categories.php:141
+#: includes/Admin/views/partials/invoice-items.php:55
+#: includes/Admin/views/screens/category-edit.php:62
+#: includes/Admin/views/screens/invoice-view.php:141
+#: includes/Admin/views/screens/item-edit.php:141
+msgid "Description"
+msgstr ""
+
+#: includes/Admin/ListTables/Categories.php:142
+#: includes/Admin/ListTables/Items.php:176
+#: includes/Admin/views/screens/account-edit.php:62
+#: includes/Admin/views/screens/category-edit.php:51
+#: includes/Admin/views/screens/item-edit.php:57
+msgid "Type"
+msgstr ""
+
+#: includes/Admin/ListTables/Customers.php:60
+msgid "You do not have permission to delete customers."
+msgstr ""
+
+#. translators: %s: number of customers deleted (formatted).
+#: includes/Admin/ListTables/Customers.php:78
+#, php-format
+msgid "%s customer(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Customers.php:91
+msgid "No customers found."
+msgstr ""
+
+#: includes/Admin/ListTables/Customers.php:121
+#: includes/Admin/ListTables/Expenses.php:134
+#: includes/Admin/ListTables/Invoices.php:228
+#: includes/Admin/ListTables/Items.php:160
+#: includes/Admin/ListTables/Payments.php:146
+#: includes/Admin/ListTables/Transfers.php:126
+msgid "Filter"
+msgstr ""
+
+#: includes/Admin/ListTables/Customers.php:136
+#: includes/Admin/ScreenViewData.php:650
+#: includes/Admin/Settings/General.php:48
+#: includes/Admin/views/screens/customer-edit.php:67
+msgid "Email"
+msgstr ""
+
+#: includes/Admin/ListTables/Customers.php:137
+#: includes/Admin/ScreenViewData.php:651
+#: includes/Admin/Settings/General.php:60
+#: includes/Admin/views/screens/customer-edit.php:75
+msgid "Phone"
+msgstr ""
+
+#: includes/Admin/ListTables/Customers.php:138
+#: includes/Admin/ScreenViewData.php:657
+#: includes/Admin/Settings/General.php:167
+#: includes/Admin/views/screens/customer-edit.php:163
+msgid "Country"
+msgstr ""
+
+#: includes/Admin/ListTables/Expenses.php:81
+msgid "You do not have permission to delete expenses."
+msgstr ""
+
+#. translators: %s: number of expenses deleted (formatted)
+#: includes/Admin/ListTables/Expenses.php:95
+#, php-format
+msgid "%s expense(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Expenses.php:147
+#: includes/Admin/ListTables/Payments.php:165
+#: includes/Admin/ListTables/Transfers.php:155
+#: includes/Admin/views/partials/expenses-table.php:18
+#: includes/Admin/views/partials/payments-table.php:18
+#: includes/Admin/views/screens/expense-edit.php:143
+#: includes/Admin/views/screens/invoice-view.php:136
+#: includes/Admin/views/screens/payment-edit.php:178
+#: includes/Admin/views/screens/transfer-edit.php:126
+#: templates/content-expense.php:55
+#: templates/content-payment.php:116
+msgid "Reference"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:84
+msgid "You do not have permission to delete contracts."
+msgstr ""
+
+#. translators: %s: number of contracts deleted (formatted).
+#: includes/Admin/ListTables/Invoices.php:102
+#, php-format
+msgid "%s contract(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:117
+msgid "You do not have permission to edit or cancel contracts."
+msgstr ""
+
+#. translators: %s: number of contracts canceled (formatted).
+#: includes/Admin/ListTables/Invoices.php:141
+#, php-format
+msgid "%s contract(s) canceled successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:154
+msgid "No contracts found."
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:201
+#: includes/Admin/views/screens/invoice-view.php:148
+msgid "Cancel"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:243
+msgid "Contract/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:245
+msgid "Contract/Draft #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:247
+msgid "Contract/Sent #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:249
+msgid "Accept/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:251
+msgid "Partial/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:253
+msgid "Paid/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:255
+msgid "Overdue/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:257
+msgid "Auto/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:262
+msgid "Cancelled/Bill #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:270
+#: includes/Admin/views/screens/invoice-edit.php:65
+msgid "Issue Date"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:271
+#: includes/Admin/Settings/Sales.php:109
+#: includes/Admin/views/screens/invoice-edit.php:91
+msgid "Due Date"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:272
+#: includes/Admin/views/screens/invoice-edit.php:39
+msgid "Client"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:273
+msgid "Order #"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:274
+#: includes/Admin/views/partials/invoices-table.php:19
+#: includes/Admin/views/screens/invoice-edit.php:202
+#: templates/content-expense.php:62
+msgid "Status"
+msgstr ""
+
+#: includes/Admin/ListTables/Invoices.php:275
+#: includes/Admin/Reports/Expenses.php:112
+#: includes/Admin/Reports/Sales.php:112
+#: includes/Admin/views/partials/invoice-totals.php:51
+#: includes/Admin/views/partials/invoices-table.php:18
+#: includes/Functions/templates.php:332
+msgid "Total"
+msgstr ""
+
+#: includes/Admin/ListTables/Items.php:68
+msgid "You do not have permission to delete services."
+msgstr ""
+
+#. translators: %s: number of services deleted (formatted).
+#: includes/Admin/ListTables/Items.php:86
+#, php-format
+msgid "%s service(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Items.php:99
+#: templates/content-invoice.php:132
+msgid "No services found."
+msgstr ""
+
+#: includes/Admin/ListTables/Items.php:177
+#: includes/Admin/views/screens/expense-edit.php:109
+#: includes/Admin/views/screens/item-edit.php:84
+#: includes/Admin/views/screens/payment-edit.php:109
+#: includes/Repositories/Terms.php:53
+msgid "Category"
+msgstr ""
+
+#: includes/Admin/ListTables/Items.php:178
+#: includes/Admin/Settings/Sales.php:202
+#: includes/Admin/views/partials/invoice-items.php:136
+#: includes/Admin/views/screens/item-edit.php:67
+#: includes/Repositories/Invoices.php:83
+msgid "Price"
+msgstr ""
+
+#: includes/Admin/ListTables/ListTable.php:120
+msgid "Active"
+msgstr ""
+
+#: includes/Admin/ListTables/ListTable.php:121
+msgid "Inactive"
+msgstr ""
+
+#: includes/Admin/ListTables/ListTable.php:152
+msgid "Filter by category"
+msgstr ""
+
+#: includes/Admin/ListTables/ListTable.php:172
+msgid "Filter by account"
+msgstr ""
+
+#: includes/Admin/ListTables/ListTable.php:199
+msgid "Filter by customer"
+msgstr ""
+
+#: includes/Admin/ListTables/ListTable.php:226
+#: includes/Admin/ListTables/ListTable.php:233
+msgid "Filter by date"
+msgstr ""
+
+#: includes/Admin/ListTables/Payments.php:81
+msgid "You do not have permission to delete payments."
+msgstr ""
+
+#. translators: %s: number of payments deleted (formatted).
+#: includes/Admin/ListTables/Payments.php:100
+#, php-format
+msgid "%s payment(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Payments.php:164
+#: includes/Admin/views/screens/payment-edit.php:166
+#: includes/Functions/templates.php:219
+#: includes/Repositories/Documents.php:55
+msgid "Contract"
+msgstr ""
+
+#. translators: %s: number of taxes deleted (formatted).
+#: includes/Admin/ListTables/Taxes.php:71
+#, php-format
+msgid "%s tax(es) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Taxes.php:84
+msgid "No taxes found."
+msgstr ""
+
+#: includes/Admin/ListTables/Taxes.php:103
+msgid "Rate"
+msgstr ""
+
+#: includes/Admin/ListTables/Taxes.php:104
+#: includes/Admin/views/screens/tax-edit.php:61
+msgid "Compound"
+msgstr ""
+
+#: includes/Admin/ListTables/Taxes.php:161
+#: includes/Admin/views/screens/tax-edit.php:65
+msgid "Yes"
+msgstr ""
+
+#: includes/Admin/ListTables/Taxes.php:162
+#: includes/Admin/views/screens/tax-edit.php:66
+msgid "No"
+msgstr ""
+
+#: includes/Admin/ListTables/Transfers.php:79
+msgid "You do not have permission to delete transfers."
+msgstr ""
+
+#. translators: %s: number of transfers deleted (formatted).
+#: includes/Admin/ListTables/Transfers.php:97
+#, php-format
+msgid "%s transfers(s) deleted successfully."
+msgstr ""
+
+#: includes/Admin/ListTables/Transfers.php:110
+msgid "No transfers found."
+msgstr ""
+
+#: includes/Admin/ListTables/Transfers.php:153
+#: includes/Admin/views/screens/transfer-edit.php:42
+msgid "From Account"
+msgstr ""
+
+#: includes/Admin/ListTables/Transfers.php:154
+#: includes/Admin/views/screens/transfer-edit.php:65
+msgid "To Account"
+msgstr ""
+
+#: includes/Admin/Menus.php:70
+#: includes/Admin/Menus.php:71
+msgid "Dashboard"
+msgstr ""
+
+#: includes/Admin/Payments.php:47
+#: includes/Admin/Reports/Profits.php:85
+#: includes/Admin/ScreenViewData.php:421
+#: includes/Admin/ScreenViewData.php:446
+#: includes/Admin/ScreenViewData.php:683
+#: includes/Admin/views/screens/payment-list.php:16
+#: templates/content-invoice.php:162
+msgid "Payments"
+msgstr ""
+
+#: includes/Admin/Payments.php:58
+#: includes/Admin/Payments.php:247
+msgid "You do not have permission to edit payments."
+msgstr ""
+
+#: includes/Admin/Payments.php:133
+msgid "Payment saved successfully."
+msgstr ""
+
+#: includes/Admin/Payments.php:149
+msgid "You do not have permission to update payments."
+msgstr ""
+
+#: includes/Admin/Payments.php:166
+msgid "Payment not found."
+msgstr ""
+
+#: includes/Admin/Payments.php:183
+msgid "Payment updated successfully."
+msgstr ""
+
+#: includes/Admin/Payments.php:212
+msgid "You do not have permission to add payments."
+msgstr ""
+
+#: includes/Admin/Payments.php:221
+msgid "You attempted to retrieve a payment that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Payments.php:232
+msgid "You attempted to edit a payment that is not editable."
+msgstr ""
+
+#: includes/Admin/Payments.php:241
+msgid "You do not have permission to view payments."
+msgstr ""
+
+#: includes/Admin/Reports.php:35
+#: includes/Admin/ScreenViewData.php:177
+msgid "Sales Report"
+msgstr ""
+
+#: includes/Admin/Reports.php:36
+#: includes/Admin/ScreenViewData.php:178
+msgid "Expenses Report"
+msgstr ""
+
+#: includes/Admin/Reports.php:37
+#: includes/Admin/ScreenViewData.php:179
+msgid "Profits Report"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:19
+msgid "Contract Pilot Expenses Report"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:24
+#: includes/Admin/Reports/Profits.php:24
+#: includes/Admin/Reports/Sales.php:24
+#: includes/Repositories/Items.php:66
+msgid "Year"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:29
+#: includes/Admin/Reports/Profits.php:29
+#: includes/Admin/Reports/Sales.php:29
+msgid "Submit"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:38
+msgid "Total Expense"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:47
+#: includes/Admin/Reports/Profits.php:47
+#: includes/Admin/Reports/Sales.php:47
+msgid "Monthly Avg."
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:56
+msgid "Monthly Aid"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:69
+msgid "Payments by Months"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:78
+#: includes/Admin/Reports/Profits.php:77
+#: includes/Admin/Reports/Sales.php:78
+#: includes/Repositories/Items.php:65
+msgid "Month"
+msgstr ""
+
+#: includes/Admin/Reports/Expenses.php:104
+#: includes/Admin/Reports/Sales.php:104
+msgid "No data found"
+msgstr ""
+
+#: includes/Admin/Reports/Profits.php:19
+msgid "Contract Pilot Profits Report"
+msgstr ""
+
+#: includes/Admin/Reports/Profits.php:38
+msgid "Total Profit"
+msgstr ""
+
+#: includes/Admin/Reports/Profits.php:56
+msgid "Profit - Aid"
+msgstr ""
+
+#: includes/Admin/Reports/Profits.php:68
+msgid "Profits by Months"
+msgstr ""
+
+#: includes/Admin/Reports/Sales.php:19
+msgid "Contract Pilot Sales Report"
+msgstr ""
+
+#: includes/Admin/Reports/Sales.php:38
+msgid "Total Sale"
+msgstr ""
+
+#: includes/Admin/Reports/Sales.php:56
+msgid "Daily Avg."
+msgstr ""
+
+#: includes/Admin/Reports/Sales.php:69
+msgid "Sales by Months"
+msgstr ""
+
+#: includes/Admin/Request.php:48
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/Admin/Request.php:111
+msgid "Security check failed. Please reload the page and try again."
+msgstr ""
+
+#. translators: %s: status label, e.g. Contract/Draft
+#. translators: %s: status label
+#: includes/Admin/ScreenViewData.php:86
+#: includes/Admin/views/screens/invoice-view.php:49
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:89
+msgid "Edit Contract"
+msgstr ""
+
+#. translators: %s: status label, e.g. Contract/Draft
+#: includes/Admin/ScreenViewData.php:145
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:148
+msgid "View Contract"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:429
+#: includes/Admin/ScreenViewData.php:454
+#: includes/Admin/Settings/Sales.php:135
+#: includes/Admin/views/partials/notes-card.php:31
+#: includes/Admin/views/partials/notes-section.php:29
+#: includes/Admin/views/screens/invoice-edit.php:154
+#: includes/Admin/views/screens/transfer-edit.php:136
+#: templates/content-expense.php:74
+#: templates/content-invoice.php:155
+#: templates/content-payment.php:141
+msgid "Notes"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:581
+#: includes/Admin/ScreenViewData.php:659
+#: includes/Admin/Settings/General.php:22
+#: includes/Admin/views/screens/account-edit.php:74
+msgid "Currency"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:585
+#: includes/Admin/ScreenViewData.php:661
+msgid "Created"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:591
+#: includes/Admin/ScreenViewData.php:667
+msgid "Updated"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:620
+msgid "Account Details"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:649
+#: includes/Admin/views/screens/customer-edit.php:94
+msgid "Company"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:652
+#: includes/Admin/views/screens/customer-edit.php:103
+msgid "Website"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:653
+#: includes/Admin/Settings/General.php:119
+#: includes/Admin/views/screens/customer-edit.php:130
+msgid "Address"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:654
+#: includes/Admin/Settings/General.php:131
+#: includes/Admin/views/screens/customer-edit.php:138
+msgid "City"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:655
+#: includes/Admin/Settings/General.php:143
+#: includes/Admin/views/screens/customer-edit.php:146
+msgid "State"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:656
+msgid "Postcode"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:658
+#: includes/Admin/Settings/General.php:84
+#: includes/Admin/views/screens/customer-edit.php:111
+msgid "Tax Number"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:693
+#: includes/Functions/templates.php:339
+msgid "Due"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:697
+#: includes/Repositories/Invoices.php:60
+msgid "Paid"
+msgstr ""
+
+#: includes/Admin/ScreenViewData.php:702
+msgid "Details"
+msgstr ""
+
+#: includes/Admin/Scripts.php:143
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: includes/Admin/Scripts.php:147
+msgid "Close"
+msgstr ""
+
+#: includes/Admin/Settings.php:64
+#: includes/Admin/Settings.php:123
+msgid "Banking Account"
+msgstr ""
+
+#: includes/Admin/Settings.php:70
+msgid "Feature Access"
+msgstr ""
+
+#: includes/Admin/Settings.php:126
+msgid "Manage your banking accounts from the Banking section."
+msgstr ""
+
+#: includes/Admin/Settings.php:132
+msgid "Global Base Currency"
+msgstr ""
+
+#: includes/Admin/Settings.php:143
+msgid "This selection is used as the default currency across the plugin."
+msgstr ""
+
+#: includes/Admin/Settings.php:150
+msgid "Save Currency"
+msgstr ""
+
+#: includes/Admin/Settings.php:158
+msgid "Open Banking Accounts"
+msgstr ""
+
+#: includes/Admin/Settings.php:189
+msgid "Invalid base currency selected."
+msgstr ""
+
+#: includes/Admin/Settings.php:195
+msgid "Base currency updated."
+msgstr ""
+
+#: includes/Admin/Settings.php:215
+#: includes/Admin/views/partials/dashboard-info-message.php:20
+msgid "About Contract Pilot"
+msgstr ""
+
+#: includes/Admin/Settings.php:220
+#: includes/Admin/views/partials/dashboard-info-message.php:25
+msgid "Contract Pilot helps you manage contracts and related business records in WordPress."
+msgstr ""
+
+#: includes/Admin/Settings.php:224
+msgid "It builds on a structured admin UI and REST-oriented workflows suitable for small businesses."
+msgstr ""
+
+#: includes/Admin/Settings.php:229
+#: includes/Admin/views/partials/dashboard-info-message.php:27
+msgid "Go to"
+msgstr ""
+
+#: includes/Admin/Settings.php:231
+#: includes/Admin/views/partials/dashboard-info-message.php:29
+msgid "for a showcase of advanced features."
+msgstr ""
+
+#: includes/Admin/Settings.php:244
+#: includes/Admin/views/partials/dashboard-info-message.php:58
+msgid "Show dashboard intro message"
+msgstr ""
+
+#: includes/Admin/Settings.php:248
+#: includes/Admin/views/partials/dashboard-info-message.php:61
+#: includes/Admin/views/screens/expense-edit.php:189
+#: includes/Admin/views/screens/invoice-edit.php:230
+#: includes/Admin/views/screens/item-edit.php:175
+#: includes/Admin/views/screens/payment-edit.php:229
+#: includes/Admin/views/screens/transfer-edit.php:154
+msgid "Save"
+msgstr ""
+
+#: includes/Admin/Settings.php:256
+msgid "Safety locks for Banking"
+msgstr ""
+
+#: includes/Admin/Settings.php:259
+msgid "Current user unlocked:"
+msgstr ""
+
+#: includes/Admin/Settings.php:267
+msgid "Enable for Current User"
+msgstr ""
+
+#: includes/Admin/Settings.php:278
+msgid "Lock Current User"
+msgstr ""
+
+#: includes/Admin/Settings.php:316
+msgid "Current user enabled for Banking."
+msgstr ""
+
+#: includes/Admin/Settings.php:323
+msgid "Current user has been locked."
+msgstr ""
+
+#: includes/Admin/Settings.php:333
+msgid "Dashboard intro message setting saved."
+msgstr ""
+
+#: includes/Admin/Settings.php:358
+msgid "Safety locks. Enable access in Settings > Feature Access."
+msgstr ""
+
+#: includes/Admin/Settings.php:524
+msgid "Banking Access Diagnostics"
+msgstr ""
+
+#: includes/Admin/Settings.php:531
+msgid "Current user roles:"
+msgstr ""
+
+#: includes/Admin/Settings.php:535
+msgid "current_user_can('contract_pilot_banking_tools_access'):"
+msgstr ""
+
+#: includes/Admin/Settings.php:544
+msgid "Role option contains current user role:"
+msgstr ""
+
+#: includes/Admin/Settings.php:768
+msgid "Select an option&hellip;"
+msgstr ""
+
+#: includes/Admin/Settings.php:961
+msgid "Day(s)"
+msgstr ""
+
+#: includes/Admin/Settings.php:962
+msgid "Week(s)"
+msgstr ""
+
+#: includes/Admin/Settings.php:963
+msgid "Month(s)"
+msgstr ""
+
+#: includes/Admin/Settings.php:964
+msgid "Year(s)"
+msgstr ""
+
+#. translators: 1: page title 2: numeric page ID
+#: includes/Admin/Settings.php:1042
+#, php-format
+msgid "%1$s (ID: %2$s)"
+msgstr ""
+
+#: includes/Admin/Settings.php:1062
+msgid "Search for a page&hellip;"
+msgstr ""
+
+#: includes/Admin/Settings/Extensions.php:14
+msgid "Extensions"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:14
+#: includes/Admin/Settings/General.php:21
+msgid "General"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:31
+msgid "Business Information"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:37
+msgid "The name of your business. This will be used in the invoice, bill, and other documents."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:49
+msgid "The email address of your business. This will be used in the invoice, bill, and other documents."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:61
+msgid "The phone number of your business. This will be used in the invoice, bill, and other documents."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:72
+#: templates/content-invoice.php:37
+#: templates/content-payment.php:19
+msgid "Logo"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:73
+msgid "The logo of your business. This will be used in the invoice, bill, and other documents. Upload via Media Library."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:85
+msgid "The tax number of your business. This will be used in the invoice, bill, and other documents."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:96
+msgid "Financial Year Start"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:97
+msgid "The start date of your financial year."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:114
+msgid "Business Address"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:120
+msgid "The street address of your business."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:132
+msgid "The city in which your business is located. This will be used in the invoice, bill, and other documents."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:144
+msgid "The state in which your business is located."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:155
+msgid "ZIP"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:156
+msgid "The postcode or ZIP code of your business (if any). This will be used in the invoice, bill, and other documents."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:168
+msgid "The country in which your business is located."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:177
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:196
+msgid "Currency Settings"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:202
+msgid "Base Currency"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:203
+msgid "The base currency of your business. Currency can not be changed once you have recorded any transaction."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:217
+msgid "Currency Position"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:218
+msgid "The position of the currency symbol."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:226
+msgid "Before"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:227
+msgid "After"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:232
+msgid "Thousand Separator"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:233
+msgid "The character used to separate thousands."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:244
+msgid "Decimal Separator"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:245
+msgid "The character used to separate decimals."
+msgstr ""
+
+#: includes/Admin/Settings/General.php:256
+msgid "Currency Precision"
+msgstr ""
+
+#: includes/Admin/Settings/General.php:257
+msgid "The number of decimal places to display."
+msgstr ""
+
+#: includes/Admin/Settings/Page.php:40
+msgid "Settings saved."
+msgstr ""
+
+#: includes/Admin/Settings/Page.php:117
+#: includes/Admin/Settings/Page.php:119
+msgid "Save changes"
+msgstr ""
+
+#: includes/Admin/Settings/Page.php:129
+#: includes/Admin/Settings/Purchases.php:19
+#: includes/Admin/Settings/Sales.php:19
+#: includes/Admin/Settings/Taxes.php:19
+msgid "Options"
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:12
+#: includes/Admin/Utilities.php:28
+#: includes/Admin/Utilities.php:29
+msgid "Purchases"
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:28
+msgid "Expense Settings"
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:29
+msgid "Customize how your expense number gets generated automatically when you create a new expense."
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:37
+#: includes/Admin/Settings/Sales.php:38
+#: includes/Admin/Settings/Sales.php:83
+msgid "Number Prefix"
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:38
+msgid "The prefix of the expense number."
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:49
+#: includes/Admin/Settings/Sales.php:50
+#: includes/Admin/Settings/Sales.php:96
+msgid "Minimum Digits"
+msgstr ""
+
+#: includes/Admin/Settings/Purchases.php:50
+msgid "The minimum digits of the expense number."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:29
+msgid "Payment Settings"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:30
+msgid "Customize how your payment number gets generated automatically when you create a new payment."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:39
+msgid "The prefix of the payment number."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:51
+msgid "The minimum digits of the payment number."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:73
+msgid "Contract Settings"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:74
+msgid "Customize how your contract number gets generated automatically when you create a new contract."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:84
+msgid "The prefix of the contract number."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:97
+msgid "The minimum digits of the contract number."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:110
+msgid "Specify how due date is automatically set when you create a contract."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:126
+msgid "Contract Defaults"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:127
+msgid "Customize the default values of your contracts."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:136
+msgid "The note that will be added to the contract automatically when you create a new contract."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:143
+msgid "Thank you for your business!"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:150
+#: includes/Admin/views/screens/invoice-edit.php:166
+msgid "Terms"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:151
+msgid "The terms that will be added to the contract automatically when you create a new contract."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:158
+msgid "Payment is due within 30 days."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:170
+msgid "Contract Columns"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:171
+msgid "Customize the columns of your contracts."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:181
+msgid "Service Label"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:182
+msgid "The name of the service column."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:189
+msgid "Items"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:194
+msgid "Price Label"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:195
+msgid "The name of the price column."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:207
+msgid "Quantity Label"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:208
+msgid "The name of the quantity column."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:215
+#: includes/Admin/views/partials/invoice-items.php:127
+#: includes/Repositories/Invoices.php:79
+msgid "Quantity"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:220
+msgid "Tax Label"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:221
+msgid "The name of the tax column."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:228
+#: includes/Admin/views/partials/invoice-totals.php:29
+#: includes/Functions/templates.php:316
+#: includes/Repositories/Invoices.php:87
+#: includes/Repositories/Terms.php:54
+msgid "Tax"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:233
+msgid "Subtotal Label"
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:234
+msgid "The name of the subtotal column."
+msgstr ""
+
+#: includes/Admin/Settings/Sales.php:241
+#: includes/Admin/views/partials/invoice-totals.php:19
+#: includes/Functions/templates.php:308
+#: includes/Repositories/Invoices.php:91
+msgid "Subtotal"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:12
+#: includes/Admin/views/screens/item-edit.php:119
+#: includes/Admin/views/screens/tax-list.php:16
+msgid "Taxes"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:20
+msgid "Rates"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:29
+msgid "Tax options"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:34
+msgid "Enable Taxes"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:35
+msgid "Enable tax rates and calculations."
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:44
+msgid "Display tax totals"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:50
+msgid "As a single total"
+msgstr ""
+
+#: includes/Admin/Settings/Taxes.php:51
+msgid "Itemized"
+msgstr ""
+
+#: includes/Admin/Taxes.php:36
+msgid "You do not have permission to edit taxes."
+msgstr ""
+
+#: includes/Admin/Taxes.php:62
+msgid "Tax saved successfully."
+msgstr ""
+
+#: includes/Admin/Taxes.php:97
+msgid "Number of taxes per page:"
+msgstr ""
+
+#: includes/Admin/Transfers.php:40
+#: includes/Admin/views/screens/transfer-list.php:16
+msgid "Transfers"
+msgstr ""
+
+#: includes/Admin/Transfers.php:52
+#: includes/Admin/Transfers.php:126
+msgid "You do not have permission to edit transfers."
+msgstr ""
+
+#: includes/Admin/Transfers.php:93
+msgid "Transfer saved successfully."
+msgstr ""
+
+#: includes/Admin/Transfers.php:110
+msgid "You do not have permission to add transfers."
+msgstr ""
+
+#: includes/Admin/Transfers.php:118
+msgid "You attempted to retrieve a transfer that does not exist. Perhaps it was deleted?"
+msgstr ""
+
+#: includes/Admin/Utilities.php:21
+#: includes/Admin/Utilities.php:22
+#: includes/Admin/views/screens/invoice-list.php:17
+msgid "Contracts"
+msgstr ""
+
+#: includes/Admin/Utilities.php:35
+#: includes/Admin/Utilities.php:36
+msgid "Banking"
+msgstr ""
+
+#: includes/Admin/Utilities.php:42
+#: includes/Admin/Utilities.php:43
+#: includes/Foundation/PluginBase.php:488
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/views/partials/attachment-card.php:14
+#: includes/Admin/views/screens/expense-edit.php:196
+#: includes/Admin/views/screens/payment-edit.php:236
+msgid "Attachment"
+msgstr ""
+
+#. translators: %1$s: contribution page URL (href), %2$s: same URL as visible link text
+#: includes/Admin/views/partials/dashboard-info-message.php:36
+#, php-format
+msgid "Thank you for your aid, <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">%2$s</a>, to this open source project."
+msgstr ""
+
+#: includes/Admin/views/partials/invoice-items.php:59
+msgid "Select a tax"
+msgstr ""
+
+#: includes/Admin/views/partials/invoice-items.php:155
+msgid "Remove item"
+msgstr ""
+
+#: includes/Admin/views/partials/invoice-items.php:170
+msgid "No services added yet."
+msgstr ""
+
+#: includes/Admin/views/partials/invoices-table.php:12
+msgid "Recent Invoices"
+msgstr ""
+
+#: includes/Admin/views/partials/note-form.php:27
+#: includes/Admin/views/partials/note-form.php:31
+msgid "Add Note"
+msgstr ""
+
+#: includes/Admin/views/partials/note-form.php:28
+msgid "Enter Note"
+msgstr ""
+
+#: includes/Admin/views/partials/note-item.php:15
+msgid "System"
+msgstr ""
+
+#. translators: %s: note author name
+#: includes/Admin/views/partials/note-item.php:40
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: includes/Admin/views/partials/note-item.php:49
+msgctxt "Delete"
+msgid "Delete"
+msgstr ""
+
+#: includes/Admin/views/partials/note-list.php:15
+msgid "No notes found."
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:15
+msgid "Edit Account"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:17
+#: includes/Admin/views/screens/account-list.php:20
+#: includes/Admin/views/screens/category-edit.php:17
+#: includes/Admin/views/screens/category-list.php:19
+#: includes/Admin/views/screens/customer-edit.php:17
+#: includes/Admin/views/screens/customer-list.php:19
+#: includes/Admin/views/screens/expense-edit.php:17
+#: includes/Admin/views/screens/expense-list.php:19
+#: includes/Admin/views/screens/expense-view.php:15
+#: includes/Admin/views/screens/invoice-list.php:20
+#: includes/Admin/views/screens/invoice-view.php:20
+#: includes/Admin/views/screens/item-edit.php:19
+#: includes/Admin/views/screens/item-list.php:20
+#: includes/Admin/views/screens/payment-edit.php:17
+#: includes/Admin/views/screens/payment-list.php:19
+#: includes/Admin/views/screens/payment-view.php:16
+#: includes/Admin/views/screens/tax-edit.php:16
+#: includes/Admin/views/screens/tax-list.php:18
+#: includes/Admin/views/screens/transfer-edit.php:16
+#: includes/Admin/views/screens/transfer-list.php:19
+msgid "Add New"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:20
+#: includes/Admin/views/screens/account-edit.php:113
+#: includes/Admin/views/screens/expense-edit.php:80
+#: includes/Admin/views/screens/payment-edit.php:81
+#: includes/Admin/views/screens/transfer-edit.php:56
+#: includes/Admin/views/screens/transfer-edit.php:79
+msgid "Add Account"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:22
+#: includes/Admin/views/screens/account-view.php:16
+#: includes/Admin/views/screens/category-edit.php:22
+#: includes/Admin/views/screens/customer-edit.php:22
+#: includes/Admin/views/screens/customer-view.php:15
+#: includes/Admin/views/screens/expense-edit.php:22
+#: includes/Admin/views/screens/expense-view.php:18
+#: includes/Admin/views/screens/invoice-edit.php:24
+#: includes/Admin/views/screens/invoice-view.php:23
+#: includes/Admin/views/screens/item-edit.php:25
+#: includes/Admin/views/screens/payment-edit.php:22
+#: includes/Admin/views/screens/payment-view.php:19
+#: includes/Admin/views/screens/tax-edit.php:21
+#: includes/Admin/views/screens/transfer-edit.php:22
+msgid "Go back"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:33
+msgid "Account Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:44
+msgid "XYZ Saving Account"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:55
+msgid "1234567890"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:67
+msgid "Select Type"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:98
+#: includes/Admin/views/screens/category-edit.php:82
+#: includes/Admin/views/screens/customer-edit.php:183
+#: includes/Admin/views/screens/expense-edit.php:174
+#: includes/Admin/views/screens/expense-view.php:36
+#: includes/Admin/views/screens/invoice-edit.php:191
+#: includes/Admin/views/screens/invoice-view.php:41
+#: includes/Admin/views/screens/item-edit.php:160
+#: includes/Admin/views/screens/payment-edit.php:209
+#: includes/Admin/views/screens/payment-view.php:39
+#: includes/Admin/views/screens/tax-edit.php:84
+msgid "Actions"
+msgstr ""
+
+#: includes/Admin/views/screens/account-edit.php:111
+msgid "Update Account"
+msgstr ""
+
+#: includes/Admin/views/screens/account-list.php:17
+msgid "Accounts"
+msgstr ""
+
+#. translators: %s: search query text.
+#: includes/Admin/views/screens/account-list.php:27
+#: includes/Admin/views/screens/category-list.php:25
+#: includes/Admin/views/screens/customer-list.php:26
+#: includes/Admin/views/screens/expense-list.php:26
+#: includes/Admin/views/screens/invoice-list.php:27
+#: includes/Admin/views/screens/item-list.php:27
+#: includes/Admin/views/screens/payment-list.php:26
+#: includes/Admin/views/screens/tax-list.php:24
+#: includes/Admin/views/screens/transfer-list.php:26
+#, php-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: includes/Admin/views/screens/account-list.php:35
+#: includes/Admin/views/screens/category-list.php:33
+#: includes/Admin/views/screens/customer-list.php:34
+#: includes/Admin/views/screens/expense-list.php:34
+#: includes/Admin/views/screens/invoice-list.php:35
+#: includes/Admin/views/screens/item-list.php:35
+#: includes/Admin/views/screens/payment-list.php:34
+#: includes/Admin/views/screens/tax-list.php:32
+#: includes/Admin/views/screens/transfer-list.php:34
+msgid "Search"
+msgstr ""
+
+#: includes/Admin/views/screens/account-view.php:15
+msgid "View Account"
+msgstr ""
+
+#: includes/Admin/views/screens/account-view.php:33
+msgid "Balance:"
+msgstr ""
+
+#: includes/Admin/views/screens/account-view.php:35
+msgid "Account #:"
+msgstr ""
+
+#. translators: %s: account creation date
+#. translators: %s: customer registration date
+#: includes/Admin/views/screens/account-view.php:42
+#: includes/Admin/views/screens/customer-view.php:40
+#, php-format
+msgid "Since %s"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:15
+msgid "Edit Category"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:20
+#: includes/Admin/views/screens/category-edit.php:89
+#: includes/Admin/views/screens/expense-edit.php:125
+#: includes/Admin/views/screens/item-edit.php:97
+#: includes/Admin/views/screens/payment-edit.php:125
+msgid "Add Category"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:33
+msgid "Category Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:42
+msgid "Enter category name"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:52
+msgid "Select category type"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:63
+msgid "Enter category description"
+msgstr ""
+
+#: includes/Admin/views/screens/category-edit.php:87
+msgid "Update Category"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:15
+msgid "Edit Customer"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:20
+#: includes/Admin/views/screens/customer-edit.php:203
+#: includes/Admin/views/screens/payment-edit.php:146
+msgid "Add Customer"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:34
+msgid "Basic Details"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:42
+msgid "John Doe"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:52
+msgid "Currency Code"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:68
+msgid "john@company.com"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:76
+msgid "+1 123 456 7890"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:87
+msgid "Business Details"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:95
+msgid "XYZ Inc."
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:104
+msgid "https://example.com"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:112
+msgid "123456789"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:123
+msgid "Address Details"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:131
+msgid "123 Main St"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:139
+msgid "New York"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:147
+msgid "NY"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:154
+msgid "Postal Code"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:155
+msgid "10001"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:167
+msgid "Select Country"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:186
+#: includes/Admin/views/screens/invoice-edit.php:194
+#: includes/Admin/views/screens/payment-edit.php:212
+msgid "View"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-edit.php:201
+msgid "Update Customer"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-list.php:16
+msgid "Customers"
+msgstr ""
+
+#: includes/Admin/views/screens/customer-view.php:14
+msgid "View Customer"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:15
+msgid "Edit Expense"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:20
+msgid "Add Expense"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:33
+msgid "Expense Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:73
+#: includes/Admin/views/screens/invoice-view.php:115
+#: includes/Admin/views/screens/invoice-view.php:116
+#: includes/Admin/views/screens/payment-edit.php:73
+#: includes/Admin/views/screens/payment-edit.php:74
+#: includes/Admin/views/screens/transfer-edit.php:48
+#: includes/Admin/views/screens/transfer-edit.php:71
+msgid "Select an account"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:82
+#: includes/Admin/views/screens/payment-edit.php:83
+#: includes/Admin/views/screens/transfer-edit.php:47
+#: includes/Admin/views/screens/transfer-edit.php:70
+msgid "Select the account."
+msgstr ""
+
+#. translators: %s: decimal separator character
+#: includes/Admin/views/screens/expense-edit.php:99
+#: includes/Admin/views/screens/payment-edit.php:99
+#, php-format
+msgid "Enter the amount in the currency of the selected account, use (%s) for decimal."
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:117
+#: includes/Admin/views/screens/expense-edit.php:118
+#: includes/Admin/views/screens/payment-edit.php:117
+#: includes/Admin/views/screens/payment-edit.php:118
+msgid "Select category"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:132
+msgid "Expense Method"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:137
+#: includes/Admin/views/screens/payment-edit.php:159
+msgid "Select &hellip;"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:147
+#: includes/Admin/views/screens/payment-edit.php:182
+#: includes/Admin/views/screens/transfer-edit.php:128
+msgid "Enter reference"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:153
+#: includes/Admin/views/screens/payment-edit.php:188
+msgid "Note"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:157
+#: includes/Admin/views/screens/transfer-edit.php:138
+msgid "Enter description"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-edit.php:187
+#: includes/Admin/views/screens/invoice-edit.php:228
+#: includes/Admin/views/screens/item-edit.php:173
+#: includes/Admin/views/screens/payment-edit.php:227
+msgid "Update"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-view.php:12
+msgid "View Expense"
+msgstr ""
+
+#: includes/Admin/views/screens/expense-view.php:49
+#: includes/Admin/views/screens/invoice-view.php:77
+#: includes/Admin/views/screens/payment-view.php:52
+msgid "Print"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:22
+msgid "Add Contract"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:48
+msgid "Select a client"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:78
+msgid "Contract Number"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:103
+msgid "Order Number"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:137
+msgid "Select a service"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:159
+msgid "Add notes"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:171
+msgid "Add terms"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-edit.php:214
+msgid "Status label"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:62
+msgid "Mark Sent"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:66
+msgid "Mark Accept"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:69
+#: includes/Admin/views/screens/invoice-view.php:73
+#: includes/Admin/views/screens/invoice-view.php:147
+#: includes/Admin/views/screens/payment-edit.php:20
+msgid "Add Payment"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:105
+msgid "Add Contract Payment"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:110
+msgid "Payment Date"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:127
+#: includes/Admin/views/screens/payment-edit.php:154
+#: includes/Admin/views/screens/transfer-edit.php:115
+msgid "Payment Method"
+msgstr ""
+
+#: includes/Admin/views/screens/invoice-view.php:129
+msgid "Select Payment Method"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:16
+msgid "Edit Service"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:23
+msgid "Add Service"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:36
+msgid "Service Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:46
+msgid "Laptop"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:60
+msgid "Select the item type: Standard for regular products eligible for discounts, or Fee for extra charges that do not support discounts."
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:69
+msgid "10.00"
+msgstr ""
+
+#. translators: %s: base currency code
+#: includes/Admin/views/screens/item-edit.php:73
+#, php-format
+msgid "Enter the price of the item in %s."
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:89
+msgid "Select item category"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:105
+msgid "Unit"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:108
+msgid "Select unit"
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:127
+msgid "The selected tax rates will be applied to this item."
+msgstr ""
+
+#: includes/Admin/views/screens/item-edit.php:132
+#: includes/Admin/views/screens/tax-edit.php:91
+msgid "Add Tax"
+msgstr ""
+
+#: includes/Admin/views/screens/payment-edit.php:15
+msgid "Edit Payment"
+msgstr ""
+
+#: includes/Admin/views/screens/payment-edit.php:33
+msgid "Payment Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/payment-edit.php:140
+msgid "Select a customer"
+msgstr ""
+
+#: includes/Admin/views/screens/payment-edit.php:148
+msgid "Select the customer."
+msgstr ""
+
+#: includes/Admin/views/screens/payment-edit.php:192
+msgid "Enter note"
+msgstr ""
+
+#: includes/Admin/views/screens/payment-view.php:13
+msgid "View Payment"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:14
+msgid "Edit Rate"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:19
+msgid "Add Rate"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:32
+msgid "Tax Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:40
+msgid "Enter tax rate name"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:49
+msgid "Rate (%)"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:50
+msgid "Enter tax rate"
+msgstr ""
+
+#: includes/Admin/views/screens/tax-edit.php:89
+msgid "Update Tax"
+msgstr ""
+
+#: includes/Admin/views/screens/transfer-edit.php:13
+msgid "Edit Transfer"
+msgstr ""
+
+#: includes/Admin/views/screens/transfer-edit.php:20
+msgid "Add Transfer"
+msgstr ""
+
+#: includes/Admin/views/screens/transfer-edit.php:34
+msgid "Transfer Attributes"
+msgstr ""
+
+#: includes/Admin/views/screens/transfer-edit.php:118
+msgid "Select payment method"
+msgstr ""
+
+#: includes/Admin/views/screens/transfer-edit.php:174
+msgid "Update Transfer"
+msgstr ""
+
+#: includes/Admin/views/screens/transfer-edit.php:178
+msgid "Save Transfer"
+msgstr ""
+
+#. translators: %s: new invoice status label
+#: includes/Documents.php:93
+#, php-format
+msgid "Status changed to %s"
+msgstr ""
+
+#: includes/Foundation/PluginBase.php:452
+msgid "Documentation"
+msgstr ""
+
+#: includes/Foundation/PluginBase.php:458
+msgid "Support"
+msgstr ""
+
+#: includes/Foundation/PluginBase.php:464
+msgid "Review"
+msgstr ""
+
+#: includes/Frontend/Frontend.php:50
+msgid "You attempted to view an invoice that does not exist."
+msgstr ""
+
+#: includes/Frontend/Frontend.php:69
+msgid "You attempted to view a payment that does not exist."
+msgstr ""
+
+#: includes/functions.php:33
+msgid "US Dollar (USD)"
+msgstr ""
+
+#: includes/functions.php:34
+msgid "Canadian Dollar (CAD)"
+msgstr ""
+
+#: includes/functions.php:333
+msgid "Cash"
+msgstr ""
+
+#: includes/functions.php:334
+msgid "Cheque"
+msgstr ""
+
+#: includes/functions.php:335
+msgid "Credit Card"
+msgstr ""
+
+#: includes/functions.php:336
+msgid "Debit Card"
+msgstr ""
+
+#: includes/functions.php:337
+msgid "Bank Transfer"
+msgstr ""
+
+#: includes/functions.php:338
+msgid "PayPal"
+msgstr ""
+
+#: includes/functions.php:339
+msgid "Other"
+msgstr ""
+
+#: includes/Functions/formatters.php:99
+msgid "Tax #"
+msgstr ""
+
+#. translators: Default PHP date format when the site date format option is empty. See https://www.php.net/manual/en/datetime.format.php
+#: includes/Functions/formatters.php:121
+msgid "F j, Y"
+msgstr ""
+
+#. translators: Default PHP time format when the site time format option is empty. See https://www.php.net/manual/en/datetime.format.php
+#: includes/Functions/formatters.php:133
+msgid "g:i a"
+msgstr ""
+
+#: includes/Functions/misc.php:203
+msgid "Choose File"
+msgstr ""
+
+#: includes/Functions/misc.php:273
+msgid "required"
+msgstr ""
+
+#: includes/Functions/misc.php:308
+msgid "Upload attachment"
+msgstr ""
+
+#: includes/Functions/misc.php:336
+msgid "No file uploaded"
+msgstr ""
+
+#: includes/Functions/updates.php:237
+msgid "Opening Balance"
+msgstr ""
+
+#: includes/Functions/updates.php:629
+msgid "Database upgrade paused: duplicate Contract/Bill numbers exist. Resolve duplicate (type, number) rows before retrying."
+msgstr ""
+
+#: includes/Functions/updates.php:668
+msgid "Database upgrade failed while adding a unique index for Contract/Bill numbers."
+msgstr ""
+
+#: includes/Installer.php:585
+msgctxt "User role"
+msgid "Accounting Auditor"
+msgstr ""
+
+#: includes/Installer.php:586
+msgctxt "User role"
+msgid "Accounting Manager"
+msgstr ""
+
+#: includes/Installer.php:587
+msgctxt "User role"
+msgid "Accountant"
+msgstr ""
+
+#: includes/Models/Account.php:85
+msgid "Account name is required."
+msgstr ""
+
+#: includes/Models/Account.php:91
+msgid "Account number rate is required."
+msgstr ""
+
+#: includes/Models/Account.php:97
+msgid "Currency code is required."
+msgstr ""
+
+#: includes/Models/Category.php:63
+msgid "Category name is required."
+msgstr ""
+
+#: includes/Models/Category.php:70
+msgid "Category type is required."
+msgstr ""
+
+#: includes/Models/Category.php:84
+msgid "Category with same name and type already exists."
+msgstr ""
+
+#: includes/Models/Contact.php:96
+msgid "Name is required."
+msgstr ""
+
+#: includes/Models/Customer.php:32
+msgid "Customer with same email already exists."
+msgstr ""
+
+#: includes/Models/Customer.php:46
+msgid "Customer with same phone already exists."
+msgstr ""
+
+#: includes/Models/Document.php:196
+msgid "A document with this number already exists. Please choose a different number."
+msgstr ""
+
+#: includes/Models/Document.php:206
+msgid "Could not generate a unique document number. Please try again."
+msgstr ""
+
+#: includes/Models/DocumentItem.php:84
+msgid "Product type is required."
+msgstr ""
+
+#: includes/Models/DocumentItem.php:91
+msgid "Product quantity is required."
+msgstr ""
+
+#: includes/Models/DocumentItem.php:98
+#: includes/Models/DocumentTax.php:90
+msgid "Document ID is required."
+msgstr ""
+
+#: includes/Models/DocumentTax.php:76
+#: includes/Models/Tax.php:69
+msgid "Tax rate is required."
+msgstr ""
+
+#: includes/Models/DocumentTax.php:83
+msgid "Tax ID is required."
+msgstr ""
+
+#: includes/Models/Expense.php:54
+msgid "Expense date is required."
+msgstr ""
+
+#: includes/Models/Expense.php:57
+#: includes/Models/Payment.php:78
+msgid "Account is required."
+msgstr ""
+
+#: includes/Models/Expense.php:64
+#: includes/Models/Payment.php:88
+#: includes/Models/Transfer.php:85
+msgid "Invalid account."
+msgstr ""
+
+#: includes/Models/Item.php:108
+msgid "Service name is required."
+msgstr ""
+
+#: includes/Models/Item.php:114
+msgid "Service type is required."
+msgstr ""
+
+#: includes/Models/Note.php:44
+msgid "Missing parent ID."
+msgstr ""
+
+#: includes/Models/Note.php:50
+msgid "Missing parent type."
+msgstr ""
+
+#: includes/Models/Payment.php:72
+msgid "Payment date is required."
+msgstr ""
+
+#: includes/Models/Tax.php:63
+msgid "Tax name is required."
+msgstr ""
+
+#: includes/Models/Term.php:71
+msgid "Term name is required."
+msgstr ""
+
+#: includes/Models/Term.php:77
+msgid "Term type is required."
+msgstr ""
+
+#: includes/Models/Transfer.php:90
+msgid "From and to accounts cannot be the same."
+msgstr ""
+
+#: includes/Models/Transfer.php:95
+msgid "Invalid amount."
+msgstr ""
+
+#: includes/Repositories/Accounts.php:54
+msgid "Bank"
+msgstr ""
+
+#: includes/Repositories/Accounts.php:55
+msgid "Card"
+msgstr ""
+
+#: includes/Repositories/Categories.php:54
+#: includes/Repositories/Transactions.php:53
+msgid "Payment"
+msgstr ""
+
+#: includes/Repositories/Categories.php:55
+#: includes/Repositories/Transactions.php:54
+#: templates/content-expense.php:12
+msgid "Expense"
+msgstr ""
+
+#: includes/Repositories/Documents.php:53
+msgid "Contract/Bill"
+msgstr ""
+
+#: includes/Repositories/Documents.php:54
+msgid "Receipt"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:56
+msgid "Draft"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:57
+msgid "Sent"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:58
+msgid "Accept"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:59
+msgid "Partial"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:61
+msgid "Overdue"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:62
+msgid "Auto"
+msgstr ""
+
+#: includes/Repositories/Invoices.php:63
+msgid "Cancelled"
+msgstr ""
+
+#: includes/Repositories/Items.php:53
+msgid "Standard"
+msgstr ""
+
+#: includes/Repositories/Items.php:54
+msgid "Fee"
+msgstr ""
+
+#: includes/Repositories/Items.php:62
+msgid "Hour"
+msgstr ""
+
+#: includes/Repositories/Items.php:63
+msgid "Day"
+msgstr ""
+
+#: includes/Repositories/Items.php:64
+msgid "Week"
+msgstr ""
+
+#: includes/Services/InvoiceService.php:113
+msgid "Only contracts that are sent or overdue can be marked as accepted."
+msgstr ""
+
+#: includes/Utilities/Idempotency.php:153
+msgid "This create request is already being processed. Please wait before trying again."
+msgstr ""
+
+#: includes/Utilities/Idempotency.php:158
+msgid "This create request has already been processed. Please refresh the page before saving again."
+msgstr ""
+
+#: includes/Utilities/Idempotency.php:163
+msgid "Your form has expired. Please refresh the page and try again."
+msgstr ""
+
+#: includes/Utilities/Idempotency.php:169
+msgid "Could not validate this create request. Please refresh the page and try again."
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:13
+msgid "Today"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:14
+msgid "Yesterday"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:15
+msgid "This Week"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:16
+msgid "Last Week"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:17
+msgid "Last 30 Days"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:18
+msgid "This Month"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:19
+msgid "Last Month"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:20
+msgid "This Quarter"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:21
+msgid "Last Quarter"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:22
+msgid "This Year"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:23
+msgid "Last Year"
+msgstr ""
+
+#: includes/Utilities/ReportsUtil.php:24
+msgid "Custom"
+msgstr ""
+
+#: templates/content-expense.php:14
+msgid "Expense #:"
+msgstr ""
+
+#: templates/content-expense.php:47
+#: templates/content-invoice.php:168
+#: templates/content-payment.php:110
+msgid "Method"
+msgstr ""
+
+#: templates/content-invoice.php:60
+msgid "Contract #:"
+msgstr ""
+
+#: templates/content-invoice.php:65
+msgid "Order:"
+msgstr ""
+
+#: templates/content-invoice.php:71
+msgid "Issue:"
+msgstr ""
+
+#: templates/content-invoice.php:77
+msgid "Due:"
+msgstr ""
+
+#: templates/content-invoice.php:86
+#: templates/content-payment.php:49
+msgid "From"
+msgstr ""
+
+#: templates/content-invoice.php:92
+#: templates/content-payment.php:72
+msgid "To"
+msgstr ""
+
+#: templates/content-payment.php:40
+msgid "Payment Receipt"
+msgstr ""
+
+#: templates/content-payment.php:94
+msgid "Payment Summary"
+msgstr ""
+
+#: templates/content-payment.php:123
+msgid "Invoice"
+msgstr ""

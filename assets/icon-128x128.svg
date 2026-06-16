@@ -1,0 +1,27 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#f0f4f8"/>
+  
+  <!-- Main contract/document shape -->
+  <g transform="translate(29, 20)">
+    <!-- Document body -->
+    <rect x="0" y="0" width="70" height="88" rx="4" fill="#2563eb" stroke="#1e40af" stroke-width="1"/>
+    
+    <!-- White inner area -->
+    <rect x="6" y="6" width="58" height="76" fill="#ffffff"/>
+    
+    <!-- Contract lines -->
+    <line x1="10" y1="14" x2="54" y2="14" stroke="#2563eb" stroke-width="1"/>
+    <line x1="10" y1="22" x2="54" y2="22" stroke="#d1d5db" stroke-width="0.75"/>
+    <line x1="10" y1="28" x2="54" y2="28" stroke="#d1d5db" stroke-width="0.75"/>
+    <line x1="10" y1="34" x2="54" y2="34" stroke="#d1d5db" stroke-width="0.75"/>
+    <line x1="10" y1="40" x2="54" y2="40" stroke="#d1d5db" stroke-width="0.75"/>
+    <line x1="10" y1="46" x2="45" y2="46" stroke="#d1d5db" stroke-width="0.75"/>
+    
+    <!-- Checkmark symbol -->
+    <g transform="translate(44, 60)">
+      <circle cx="0" cy="0" r="8" fill="#10b981" stroke="#059669" stroke-width="0.75"/>
+      <polyline points="-3,0 -1,2 4,-3" stroke="#ffffff" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "name": "softestate/contract-pilot",
+  "description": "Manage contracts and related business records in WordPress.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "James Sosontovich",
+      "email": "support@softestate.net"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jjpsos\\ContractPilot\\": "includes/"
+    },
+    "classmap": [
+      "includes/"
+    ],
+    "exclude-from-classmap": [
+      "includes/Foundation/"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "autoloader-suffix": "ContractPilot"
+  }
+}
